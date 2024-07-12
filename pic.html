@@ -102,17 +102,20 @@
     <script>
         // JavaScript to load and randomize images
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('get_images.php')
-                .then(response => response.json())
-                .then(images => {
-                    const gallery = document.getElementById('photoGallery');
-                    images.forEach(image => {
-                        const img = document.createElement('img');
-                        img.src = "/images/" + image;
-                        img.alt = 'Photography by Raghavendra Meena';
-                        gallery.appendChild(img);
-                    });
-                });
+            const images = [
+                'images/photo1.jpg',
+                'images/photo2.jpg',
+                'images/photo3.jpg',
+                // Add more image paths here
+            ];
+            const shuffledImages = images.sort(() => 0.5 - Math.random());
+            const gallery = document.getElementById('photoGallery');
+            shuffledImages.forEach(image => {
+                const img = document.createElement('img');
+                img.src = image;
+                img.alt = 'Photography by Raghavendra Meena';
+                gallery.appendChild(img);
+            });
         });
     </script>
 </body>
