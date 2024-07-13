@@ -45,16 +45,51 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 10px;
+            grid-auto-rows: 200px;
         }
         .gallery img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
             transition: transform 0.3s ease;
         }
         .gallery img:hover {
             transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
         }
         footer {
             background-color: white;
@@ -99,6 +134,10 @@
     <footer>
         <p>&copy; 2023 Raghavendra Meena</p>
     </footer>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             fetch('images.json')
@@ -110,9 +149,31 @@
                         const img = document.createElement('img');
                         img.src = image;
                         img.alt = 'Photography by Raghavendra Meena';
+                        img.onclick = function() {
+                            openModal(image);
+                        };
                         gallery.appendChild(img);
                     });
                 });
+
+            const modal = document.getElementById('myModal');
+            const modalImg = document.getElementById('img01');
+            const span = document.getElementsByClassName('close')[0];
+
+            function openModal(src) {
+                modal.style.display = 'block';
+                modalImg.src = src;
+            }
+
+            span.onclick = function() {
+                modal.style.display = 'none';
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
         });
     </script>
 </body>
