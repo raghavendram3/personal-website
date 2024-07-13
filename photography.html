@@ -1,139 +1,182 @@
----
-layout: default
----
-
-<!-- Wrapper -->
-<div id="wrapper">
-
-    <!-- Header -->
-    <header id="header">
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5Q1C5BCJK9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5Q1C5BCJK9');
-</script>
-        <h1><a href="index.html"><strong>{{ site.header.title }}</strong> {{ site.header.subtitle }}</a></h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        header .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #e74c3c;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            grid-auto-rows: 200px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: white;
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">RM Photography</div>
         <nav>
-            <ul>
-                <li><a href="#footer" class="icon fa-info-circle">About</a></li>
-            </ul>
+            <a href="https://randomwalker.org/index.html">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
+    <div class="container">
+        <section id="home">
+            <h1>Welcome to My Photography Portfolio</h1>
+            <p>Explore my collection of photographs from my travels and projects.</p>
+        </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery" id="photoGallery">
+                <!-- Photos will be inserted here by JavaScript -->
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I have uploaded the photographs I have taken during my trips worldwide. Soon, I plan to upload more than 100 more pictures and arrange these photographs in a certain way, so it is easy to navigate through them.
 
-    <!-- Main -->
-    <div id="main" data-exif='{{ site.exif }}'>
-        {% for image in site.static_files %}
-        {% if image.path contains 'fulls' %}
-        <article class="thumb">
-            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
-                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt=""
-                     data-name="{{ image.name }}"/></a>
-            <!--<h2></h2>
-            <p></p>-->
-        </article>
-        {% endif %}
-        {% endfor %}
+<b>NOTE:</b> Please feel free to use the photographs I uploaded (just NOT for commercial purposes), and it is up to you if you feel like giving credit. Cheers, have a good day :)</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:raghavendra.meena@wur.nl">raghavendra.meena@wur.nl</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/raghavendra-meena/" target="_blank">Raghavendra Meena</a></p>
+        </section>
     </div>
-
-    <!-- Footer -->
-    <footer id="footer" class="panel">
-        <div class="inner split">
-            <div>
-                <section>
-                    <h2>{{ site.footer.name }}</h2>
-                    <p>{{ site.footer.bio }}</p>
-                    <p>{{ site.footer.github }}</p>
-                </section>
-                <section>
-                    <h2>Sponsor</h2>
-                    <div class="presentify">
-                        <div class="presentify-logo">
-                            <a href="https://presentify.compzets.com">
-                                <img src="https://camo.githubusercontent.com/7238b763f1ed0a7413105d5eb44368c1fc2b339e373c8927e3f02391667d55f2/68747470733a2f2f70726573656e746966792e636f6d707a6574732e636f6d2f6173736574732f696d672f70726573656e746966792f6170702d69636f6e2d3531322e706e67"
-                                 alt="presentify-logo" />
-                            </a>
-                        </div>
-                        <div class="presentify-text">
-                            Turn your screen into a canvas when on video calls and articulate your thoughts better than
-                            ever with the <a href="https://presentify.compzets.com">Presentify</a> app.
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <h2>Follow me on ...</h2>
-                    <ul class="icons">
-                        {% if site.social_urls.facebook %}
-                            <li>
-                                <a href="{{ site.social_urls.facebook }}" class="icon fa-facebook">
-                                    <span class="label">Facebook</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.twitter %}
-                            <li>
-                                <a href="{{ site.social_urls.twitter }}" class="icon fa-twitter">
-                                    <span class="label">Twitter</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.instagram %}
-                            <li>
-                                <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram">
-                                    <span class="label">Instagram</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.dribbble %}
-                            <li>
-                                <a href="{{ site.social_urls.dribbble }}" class="icon fa-dribbble">
-                                    <span class="label">Dribbble</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.github %}
-                            <li>
-                                <a href="{{ site.social_urls.github }}" class="icon fa-github">
-                                    <span class="label">GitHub</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.linkedin %}
-                            <li>
-                                <a href="{{ site.social_urls.linkedin }}" class="icon fa-linkedin">
-                                    <span class="label">LinkedIn</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                    </ul>
-                </section>
-                <p class="copyright">
-                    &copy; {{ site.author }}. Design: {{ site.web_design }}
-                </p>
-            </div>
-            <div>
-                <section>
-                    <h2>Get in touch</h2>
-                    <form method="post" action="#">
-                        <div class="field half first">
-                            <input type="text" name="name" id="name" placeholder="Name"/>
-                        </div>
-                        <div class="field half">
-                            <input type="text" name="email" id="email" placeholder="Email"/>
-                        </div>
-                        <div class="field">
-                            <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
-                        </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="Send" class="special"/></li>
-                            <li><input type="reset" value="Reset"/></li>
-                        </ul>
-                    </form>
-                </section>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; 2024 Raghavendra Meena</p>
     </footer>
-</div>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('images.json')
+                .then(response => response.json())
+                .then(images => {
+                    const shuffledImages = images.sort(() => 0.5 - Math.random());
+                    const gallery = document.getElementById('photoGallery');
+                    shuffledImages.forEach(image => {
+                        const img = document.createElement('img');
+                        img.src = image;
+                        img.alt = 'Photography by Raghavendra Meena';
+                        img.onclick = function() {
+                            openModal(image);
+                        };
+                        gallery.appendChild(img);
+                    });
+                });
+
+            const modal = document.getElementById('myModal');
+            const modalImg = document.getElementById('img01');
+            const span = document.getElementsByClassName('close')[0];
+
+            function openModal(src) {
+                modal.style.display = 'block';
+                modalImg.src = src;
+            }
+
+            span.onclick = function() {
+                modal.style.display = 'none';
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
