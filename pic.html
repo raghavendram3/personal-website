@@ -101,13 +101,14 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('get_images.php')
+            fetch('images.json')
                 .then(response => response.json())
                 .then(images => {
+                    const shuffledImages = images.sort(() => 0.5 - Math.random());
                     const gallery = document.getElementById('photoGallery');
-                    images.forEach(image => {
+                    shuffledImages.forEach(image => {
                         const img = document.createElement('img');
-                        img.src = 'images/' + image;
+                        img.src = image;
                         img.alt = 'Photography by Raghavendra Meena';
                         gallery.appendChild(img);
                     });
