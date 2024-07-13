@@ -100,23 +100,18 @@
         <p>&copy; 2023 Raghavendra Meena</p>
     </footer>
     <script>
-        // JavaScript to load and randomize images
         document.addEventListener('DOMContentLoaded', function() {
-            const images = [
-                'images/Lisbon.jpg',
-                'images/italia.jpg',
-                'images/new.jpg',
-                'images/20151121.jpg',
-                // Add more image paths here
-            ];
-            const shuffledImages = images.sort(() => 0.5 - Math.random());
-            const gallery = document.getElementById('photoGallery');
-            shuffledImages.forEach(image => {
-                const img = document.createElement('img');
-                img.src = image;
-                img.alt = 'Photography by Raghavendra Meena';
-                gallery.appendChild(img);
-            });
+            fetch('get_images.php')
+                .then(response => response.json())
+                .then(images => {
+                    const gallery = document.getElementById('photoGallery');
+                    images.forEach(image => {
+                        const img = document.createElement('img');
+                        img.src = 'images/' + image;
+                        img.alt = 'Photography by Raghavendra Meena';
+                        gallery.appendChild(img);
+                    });
+                });
         });
     </script>
 </body>
