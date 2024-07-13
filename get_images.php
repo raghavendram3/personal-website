@@ -1,5 +1,6 @@
 <?php
-$images = glob("/images/*.{jpg,jpeg,png,gif}", GLOB_BRACE);
+$directory = 'images';
+$images = glob($directory . '/*.{jpg,jpeg,png,gif}', GLOB_BRACE);
 shuffle($images);
 $images = array_map('basename', $images);
 header('Content-Type: application/json');
