@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        header .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #e74c3c;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            grid-auto-rows: 200px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: white;
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">RM Curriculum Vitae</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <body>
+	<iframe src="https://www.dropbox.com/scl/fi/ng4z0w6ebihiz4jqi2b3p/CV_Raghavendra_Meena.pdf?rlkey=o527oi5jmw7kouhs9t44m939u&st=c7coitfk&raw=1" width="100%" height="600" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+    <section class="py-5">
+        <div class="container">
+            <h2>Research Interests</h2>
+            <p>Computational materials science, surface science, heterogeneous catalysis, and application of data science &amp; machine learning in catalysis design and discovery.</p>
+        </div>
+    </section>
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2>Research Experience</h2>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;">Oct 2020 - Present</td>
+                        <td style="text-align: left;">Doctoral Student at Wageningen University &amp; Research (WUR), The Netherlands<br>
+                       Advisors: Prof. Han Zuilhof, Prof. Harry Bitter, and Prof. Guanna Li<br>
+                       Topic: Multiscale modelling of transition metal carbide catalysts for biomass conversion.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">May 2019 - May 2020</td>
+                        <td style="text-align: left;">Masters' Thesis Student at Université Pierre et Marie Curie (UPMC), (IMPMC) - Sorbonne University, France<br>
+			Advisors: Prof. Michele Casula and Prof. Prasenjit Ghosh <br>
+                        Topic: Magnetic properties of narrow zigzag graphene nanoribbons from <em>ab initio</em> calculations.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">August 2018 - May 2019</td>
+                        <td style="text-align: left;">Research Intern at Indian Institute of Science Education and Research Pune, India<br>
+                       Advisor: Prof. Prasenjit Ghosh<br>
+			Topic: Electronic structure calculations of solid materials using Quantum ESPRESSO.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">May 2018 – July 2018</td>
+                        <td style="text-align: left;">Summer Research Intern at Indian Institute of Science, India <br>
+                       Advisor: Prof. Eluvathingal D. Jemmis <br>
+			Topic: Theoretical study of isonitrile coupling mediated by allenic diborenes.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2>Publications</h2>
+            <ul>
+		    <li><p style="text-align:left;"><strong>Raghavendra Meena</strong>, Johannes Hendrik Bitter, Han Zuilhof, Guanna Li.
+                <a href="https://pubs.acs.org/doi/10.1021/acscatal.3c03728#"><em>Toward the Rational Design of More Efficient Mo<sub>2</sub>C Catalysts for Hydrodeoxygenation–Mechanism and Descriptor Identification.</em></a>
+                ACS Catalysis <strong>(2023)</strong>, 13, 13446–13455.</p></li>
+                <li><p style="text-align:left;">Hao Zhang, Aleksei Bolshakov, <strong>Raghavendra Meena</strong>, Gustavo A. Garcia, A. Lulian Dugulan, Alexander Parastaev, Guanna Li, Emiel J. M. Hensen, and Nikolay Kosinov.
+                <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202306196"><em>Revealing Active Sites and Reaction Pathways in Methane Non-Oxidative Coupling over Iron-Containing Zeolite.</em></a>
+                Angew. Chem. Int. Ed. <strong>(2023)</strong>, e202306196.</p></li>
+                <li><p style="text-align:left;"><strong>Raghavendra Meena</strong>, Guanna Li, and Michele
+                Casula. <a href="https://pubs.aip.org/aip/jcp/article-abstract/156/8/084112/2840808/Ground-state-properties-of-the-narrowest-zigzag?redirectedFrom=fulltext"><em>Ground-state properties of the narrowest zigzag graphene
+                nanoribbon from quantum Monte Carlo and comparison with density
+                functional theory.</em></a>
+                J. Chem. Phys. 156, 084112 <strong>(2022)</strong>.</p></li>
+                <li><p style="text-align:left;">Sagar Ghorai, <strong>Raghavendra Meena</strong>, Anju P. Joseph,
+                and Eluvathingal D. Jemmis. <a href="https://pubs.acs.org/doi/abs/10.1021/acs.jpca.1c05185"><em>Comparison of RNC Coupling and CO
+                Coupling Mediated by Cr–Cr Quintuple Bond and B–B Multiple Bonds: Main
+                Group Metallomimetics</em></a>. The Journal of Physical Chemistry A
+                <strong>2021</strong> 125 (33), 7207-7216.</p></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2>Skills</h2>
+            <table class="table">
+                <tbody>
+		<tr>
+		<td>Modules</td>
+		<td>(for DFT methods) GAUSSIAN, QuantumESPRESSO, VASP, ASE;
+		<br>(for QMC methods) TurboRVB;
+		<br>(for MD methods) CP2K, VASP;
+		<br>(for molecule rendering) Blender.
+		</tr>	
+                    <tr>
+                        <td>Languages</td>
+                        <td>Basic: MATLAB, C++, and bash scripting
+                        <br>Intermediate: Python, and LaTeX</td>
+                    </tr>
+                    <tr>
+                        <td>Others</td>
+                        <td>1) More than 4 years of experience in using supercomputing resources.
+                        <br>2) Linux/macOS/Windows environment.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2>Education</h2>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>Oct 2020– Present</td>
+                        <td>PhD in Theoretical &amp; Computational Chemistry at
+                        Wageningen University &amp; Research, The Netherlands</td>
+                    </tr>
+                    <tr>
+                        <td>May 2019– May 2020</td>
+                        <td>Master’s thesis in Computational Materials Science
+                        at Université Pierre et Marie Curie (UPMC, Sorbonne Université), Paris, France</td>
+                    </tr>
+                    <tr>
+                        <td>Aug 2015– April 2020</td>
+                        <td>BS-MS Dual Degree in Chemistry and Physics at
+                        Indian Institute of Science Education and Research, Pune, Maharashtra, India</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2>Grants/Awards/Scholarships</h2>
+            <ul>
+                <li>
+                    <p style="text-align:left;">Computational budget granted by NWO SURFsara on Snellius machine (<strong>1 x 500,000 SBUs and 3 x 1,000,000 SBUs</strong>).</p>
+                </li>
+                <li>
+                    <p style="text-align:left;">Erasmus+ inter-institutional credit mobility fellowship awarded by the European Union, <strong>2019-2020</strong>.</p>
+                </li>
+                <li>
+                    <p style="text-align:left;">Innovation in Science Pursuit for Inspired Research - Scholarship for Higher Education awarded by the Department of Science and Technology, India, <strong>2015-2020</strong>. Awarded to top 1000 students across India upon admission to an Indian Institute of Science Education &amp; Research.</p>
+                </li>
+                <li>
+                    <p style="text-align:left;">National Talent Search Scholarship awarded by National Council for Educational Research and Training, India, <strong>July 2013</strong>. Awarded to top 1000 students across India based on two-stage selection process.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2>Certifications</h2>
+            <ul>
+                <li>
+                    <p style="text-align:left;">Attendance at CECAM MolSim "<em>Understanding Molecular Simulation</em>" course (<strong>2023</strong>), Han-sur-Lesse winter school for theoretical &amp; computational chemistry (<strong>2021)</strong>, Paris International School on Advanced Computational Materials Science (<strong>2021</strong>), and International Conference on Electrocatalysis for Energy Applications and Sustainable Chemicals (<strong>2020</strong>) (online).</p>
+                </li>
+		<li>
+                    <p style="text-align:left;">Oral presentations at Netherlands' Catalysis and Chemistry Conference (<strong>2023</strong>), NWO CHAINS (<strong>2022</strong>), and KNCV CTC Seminars (<strong>2023</strong>); Poster presentations at Netherlands' Catalysis and Chemistry Conference (<strong>2021,2022</strong>).</p>
+                </li>
+                <!-- Add more certification entries here -->
+            </ul>
+        </div>
+    </section>
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2>Teaching & Supervision</h2>
+            <ul>
+                <li>
+                    <p style="text-align:left;">Supervised 2 MSc Major &amp; 1 MSc Minor thesis, and a BSc practical course in Bio-Organic Chemistry for Life Sciences.</p>
+                </li>
+                <li>
+                    <p style="text-align:left;">TA in the following courses: Computer modeling of biomolecules, Biofunctional food ingredients, structure &amp; reactivity.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2023 Raghavendra Meena</p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
