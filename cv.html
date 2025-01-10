@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -50,62 +51,58 @@
             margin: 0 auto;
             padding: 40px 20px;
         }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-            grid-auto-rows: 200px;
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            text-align: center;
+            position: relative;
         }
-        .gallery img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .section-title::after {
+            content: '';
+            width: 100px;
+            height: 3px;
+            background-color: #e74c3c;
+            display: block;
+            margin: 10px auto 0;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .education-item, .experience-item, .skill-item {
+            background-color: #fff;
+            padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            transition: transform 0.3s ease;
+            margin-bottom: 20px;
         }
-        .gallery img:hover {
-            transform: scale(1.05);
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
         }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.9);
+        .publications-list, .awards-list, .contributions-list, .languages-list, .hobbies-list {
+            list-style-type: none;
+            padding-left: 0;
         }
-        .modal-content {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
+        .publications-list li, .awards-list li, .contributions-list li, .languages-list li, .hobbies-list li {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
         }
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
+        .publications-list li i, .awards-list li i, .contributions-list li i, .languages-list li i, .hobbies-list li i {
+            margin-right: 10px;
+            color: #e74c3c;
         }
         footer {
-            background-color: white;
-            color: #333;
+            background-color: #333;
+            color: #fff;
             text-align: center;
             padding: 20px 0;
-            border-top: 1px solid #e0e0e0;
         }
     </style>
 </head>
@@ -120,16 +117,16 @@
         </nav>
     </header>
 
-    <section class="py-5">
+    <section class="section">
         <div class="container">
-            <h2>Research Interests</h2>
+            <h2 class="section-title">Research Interests</h2>
             <p>Advancing computational materials science and catalyst design, focusing on carbides, zeolites, CO<sub>2</sub> upgrading, and electrocatalysis. Integrating machine learning for efficient materials design & discovery.</p>
         </div>
     </section>
 
-    <section class="bg-light py-5">
+    <section class="section bg-light">
         <div class="container">
-            <h2>Education</h2>
+            <h2 class="section-title">Education</h2>
             <div class="education-item">
                 <h3>PhD Computational Chemistry</h3>
                 <p>Wageningen University & Research, 2020-2024</p>
@@ -145,9 +142,9 @@
         </div>
     </section>
 
-    <section class="py-5">
+    <section class="section">
         <div class="container">
-            <h2>Skills</h2>
+            <h2 class="section-title">Skills</h2>
             <div class="skills-grid">
                 <div class="skill-item">DFT Packages: VASP, Quantum ESPRESSO, ASE, GAUSSIAN</div>
                 <div class="skill-item">QMC: VMC, DMC, LRDMC</div>
@@ -160,9 +157,9 @@
         </div>
     </section>
 
-    <section class="bg-light py-5">
+    <section class="section bg-light">
         <div class="container">
-            <h2>Research Experience</h2>
+            <h2 class="section-title">Research Experience</h2>
             <div class="experience-item">
                 <h3>Doctoral Student, Wageningen University, NL</h3>
                 <p>Oct 2020-Dec 2024</p>
@@ -203,64 +200,76 @@
         </div>
     </section>
 
-    <section class="py-5">
+    <section class="section">
         <div class="container">
-            <h2>Publications</h2>
+            <h2 class="section-title">Publications</h2>
             <ul class="publications-list">
-                <li>Meena, R., et al. (2024). Rationalizing Catalytic Performances of Mo/W(Oxy)Carbides for Hydrodeoxygenation. (Manuscript submitted to Chem. Cat. Chem.)</li>
-                <li>Meena, R., et al. (2023). Toward the Rational Design of More Efficient Mo<sub>2</sub>C Catalysts for Hydrodeoxygenation: Mechanism and Descriptor Identification. ACS Catalysis, 13, 13446-13455.</li>
-                <li>Meena, R., et al. (2022). Ground-state properties of the narrowest zigzag graphene nanoribbon from quantum Monte Carlo. J. Chem. Phys., 156, 084112.</li>
-                <li>Pirgach, D., Meena, R., et al. (2024). Condition-Dependent Regioselectivity of Electrochemical Bromination of Methyl Levulinate. (Manuscript submitted to Green Chem.)</li>
-                <li>Hergesell, A., Baarslag, R., Seitzinger, C., Meena, R., et al. (2024). Surface-Activated Mechano-Catalysis for Ambient Conversion of Plastic Waste. J. Am. Chem. Soc., 146, 38, 26139-26147.</li>
-                <li>Zhang, H., Meena, R., et al. (2023). Revealing Active Sites in Methane Non-Oxidative Coupling over Iron-Containing Zeolite. Angew. Chem. Int. Ed., e202306196.</li>
+                <li><i class="fas fa-file-alt"></i>Meena, R., et al. (2024). Rationalizing Catalytic Performances of Mo/W(Oxy)Carbides for Hydrodeoxygenation. (Manuscript submitted to Chem. Cat. Chem.)</li>
+                <li><i class="fas fa-file-alt"></i>Meena, R., et al. (2023). Toward the Rational Design of More Efficient Mo<sub>2</sub>C Catalysts for Hydrodeoxygenation: Mechanism and Descriptor Identification. ACS Catalysis, 13, 13446-13455.</li>
+                <li><i class="fas fa-file-alt"></i>Meena, R., et al. (2022). Ground-state properties of the narrowest zigzag graphene nanoribbon from quantum Monte Carlo. J. Chem. Phys., 156, 084112.</li>
+                <li><i class="fas fa-file-alt"></i>Pirgach, D., Meena, R., et al. (2024). Condition-Dependent Regioselectivity of Electrochemical Bromination of Methyl Levulinate. (Manuscript submitted to Green Chem.)</li>
+                <li><i class="fas fa-file-alt"></i>Hergesell, A., Baarslag, R., Seitzinger, C., Meena, R., et al. (2024). Surface-Activated Mechano-Catalysis for Ambient Conversion of Plastic Waste. J. Am. Chem. Soc., 146, 38, 26139-26147.</li>
+                <li><i class="fas fa-file-alt"></i>Zhang, H., Meena, R., et al. (2023). Revealing Active Sites in Methane Non-Oxidative Coupling over Iron-Containing Zeolite. Angew. Chem. Int. Ed., e202306196.</li>
             </ul>
         </div>
     </section>
 
-    <section class="bg-light py-5">
+    <section class="section bg-light">
         <div class="container">
-            <h2>Awards and Certifications</h2>
-            <ul>
-                <li>Dutch Research Council Computational Grants (10.5 CPU hours) 2020-2025</li>
-                <li>Erasmus+ Fellowship 2019-2020</li>
-                <li>INSPIRE Scholarship 2015-2020</li>
-                <li>NTSE Scholarship 2013-2015</li>
-                <li>CECAM MolSim "Understanding Molecular Simulation" course</li>
-                <li>Han-sur-Lesse winter school for theoretical & computational chemistry</li>
-                <li>Paris International School on Advanced Computational Materials Science</li>
+            <h2 class="section-title">Awards and Certifications</h2>
+            <ul class="awards-list">
+                <li><i class="fas fa-award"></i>Dutch Research Council Computational Grants (10.5 CPU hours) 2020-2025</li>
+                <li><i class="fas fa-award"></i>Erasmus+ Fellowship 2019-2020</li>
+                <li><i class="fas fa-award"></i>INSPIRE Scholarship 2015-2020</li>
+                <li><i class="fas fa-award"></i>NTSE Scholarship 2013-2015</li>
+                <li><i class="fas fa-award"></i>CECAM MolSim "Understanding Molecular Simulation" course</li>
+                <li><i class="fas fa-award"></i>Han-sur-Lesse winter school for theoretical & computational chemistry</li>
+                <li><i class="fas fa-award"></i>Paris International School on Advanced Computational Materials Science</li>
             </ul>
         </div>
     </section>
 
-    <section class="py-5">
+    <section class="section">
         <div class="container">
-            <h2>Teaching & Leadership</h2>
-            <ul>
-                <li>Supervised 6 thesis students (3 MSc major, 1 MSc minor, 2 BSc)</li>
-                <li>Teaching assistant for advanced computational chemistry courses</li>
+            <h2 class="section-title">Teaching & Leadership</h2>
+            <ul class="awards-list">
+                <li><i class="fas fa-chalkboard-teacher"></i>Supervised 6 thesis students (3 MSc major, 1 MSc minor, 2 BSc)</li>
+                <li><i class="fas fa-chalkboard-teacher"></i>Teaching assistant for advanced computational chemistry courses</li>
             </ul>
         </div>
     </section>
 
-    <section class="py-5">
+    <section class="section bg-light">
         <div class="container">
-            <h2>Conference Contributions</h2>
-            <p><strong>Oral presentations:</strong> CHAINS 2022, NCCC 2023, KNCV CTC Seminar 2023, Invited guest lecture at Utrecht University 2024</p>
-            <p><strong>Posters:</strong> NCCC (2024, 2022), EuropaCat 2023, CHAINS 2023, KNCV CTC 2023, ICTAC 2022</p>
+            <h2 class="section-title">Conference Contributions</h2>
+            <ul class="contributions-list">
+                <li><i class="fas fa-microphone"></i><strong>Oral presentations:</strong> CHAINS 2022, NCCC 2023, KNCV CTC Seminar 2023, Invited guest lecture at Utrecht University 2024</li>
+                <li><i class="fas fa-poster"></i><strong>Posters:</strong> NCCC (2024, 2022), EuropaCat 2023, CHAINS 2023, KNCV CTC 2023, ICTAC 2022</li>
+            </ul>
         </div>
     </section>
 
-    <section class="py-5">
+    <section class="section">
         <div class="container">
-            <h2>Languages</h2>
-            <p>English (Professional), Hindi (Native), Dutch (A2), French (A1)</p>
+            <h2 class="section-title">Languages</h2>
+            <ul class="languages-list">
+                <li><i class="fas fa-language"></i>English (Professional)</li>
+                <li><i class="fas fa-language"></i>Hindi (Native)</li>
+                <li><i class="fas fa-language"></i>Dutch (A2)</li>
+                <li><i class="fas fa-language"></i>French (A1)</li>
+            </ul>
         </div>
     </section>
 
-    <section class="py-5">
+    <section class="section bg-light">
         <div class="container">
-            <h2>Hobbies</h2>
-            <p>Soccer (Semi-Pro), Chess (1576 Elo), Photography, Trading (CFDs, stocks, crypto)</p>
+            <h2 class="section-title">Hobbies</h2>
+            <ul class="hobbies-list">
+                <li><i class="fas fa-futbol"></i>Soccer (Semi-Pro)</li>
+                <li><i class="fas fa-chess"></i>Chess (1576 Elo)</li>
+                <li><i class="fas fa-camera"></i>Photography</li>
+                <li><i class="fas fa-chart-line"></i>Trading (CFDs, stocks, crypto)</li>
+            </ul>
         </div>
     </section>
 
