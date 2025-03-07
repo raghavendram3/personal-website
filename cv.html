@@ -49,12 +49,23 @@
         .tile.small {
             grid-column: span 1;
         }
-        section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2em;
-            border-bottom: 2px solid #e74c3c;
-            padding-bottom: 10px;
+        .experience {
+            border-left: 4px solid #e74c3c;
+            padding-left: 15px;
             margin-bottom: 20px;
+        }
+        .experience h3 {
+            margin: 5px 0;
+            font-size: 1.4em;
+        }
+        .experience h4 {
+            margin: 5px 0;
+            font-weight: normal;
+            color: #555;
+        }
+        .experience p {
+            margin: 5px 0;
+            color: #777;
         }
     </style>
 </head>
@@ -65,21 +76,42 @@
     <div class="container">
         <div class="tile full"><h2>Research Interests</h2><p>Computational chemist with expertise in DFT, AIMD, microkinetic modeling, and ML-based force fields for data-driven materials design & discovery.</p></div>
         <div class="tile large"><h2>Education</h2><p>PhD Computational Chemistry - Wageningen University (2020-2024)<br>MSc Materials Science - Sorbonne Université (2019-2020)<br>BS-MS Chemistry & Physics - IISER Pune (2015-2020)</p></div>
-        <div class="tile large"><h2>Research Experience</h2><p>Doctoral Student at Wageningen University, working on the catalytic activity of transition metal carbides for biomass conversion.</p>
-        <ul>
-            <li>Developed a multiscale modeling methodology to optimize catalytic activity using DFT, MKM, and AIMD.</li>
-            <li>Applied machine learning (SISSO) to identify interpretable descriptors for transition metal carbide activity.</li>
-            <li>Trained ML potentials (MACE, fair-chem) to accelerate AIMD simulations for transition metal carbides.</li>
-            <li>Investigated active sites in surface-activated mechanocatalysis for plastic waste conversion.</li>
-            <li>Analyzed the mechanism of non-oxidative methane coupling inside Fe[MFI] zeolite pores.</li>
-        </ul>
+        <div class="tile large"><h2>Research Experience</h2>
+            <div class="experience">
+                <h3>Doctoral Researcher</h3>
+                <h4>Wageningen University & Research · Full-time</h4>
+                <p>Oct 2020 - Present · Wageningen, Netherlands</p>
+                <p><strong>Advisors:</strong> Prof. Harry Bitter, Prof. Han Zuilhof & Prof. Guanna Li</p>
+                <ul>
+                    <li>Developed a multiscale modeling methodology integrating DFT, MKM, and AIMD for catalyst optimization.</li>
+                    <li>Applied machine learning (SISSO) to discover interpretable descriptors for transition metal carbide activity.</li>
+                    <li>Trained ML potentials (MACE, fair-chem) to accelerate AIMD simulations for transition metal carbides.</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h3>Master Thesis Student</h3>
+                <h4>Pierre and Marie Curie University · Apprenticeship</h4>
+                <p>Sep 2019 - Jun 2020 · Paris, France</p>
+                <p><strong>Advisors:</strong> Prof. Michele Casula & Prof. Prasenjit Ghosh</p>
+                <ul>
+                    <li>Investigated magnetic properties of the narrowest zigzag graphene nanoribbon using Quantum Monte Carlo calculations.</li>
+                    <li>Developed a computational workflow for benchmarking strongly correlated systems.</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h3>Research Intern</h3>
+                <h4>Indian Institute of Science Education and Research (IISER), Pune · Full-time</h4>
+                <p>Aug 2018 - Sep 2019 · Pune, India</p>
+                <p><strong>Advisor:</strong> Prof. Prasenjit Ghosh</p>
+                <ul>
+                    <li>Studied electronic structure and reactivity of single-atom catalysts using first-principles calculations.</li>
+                    <li>Implemented machine learning models for predicting adsorption energies on metal surfaces.</li>
+                </ul>
+            </div>
         </div>
         <div class="tile small"><h2>Skills</h2><p>DFT (VASP, QE), AIMD (CP2K, PLUMED), Python (NumPy, pandas, ML), HPC, Git, Linux.</p></div>
         <div class="tile small"><h2>Awards & Grants</h2><p>INSPIRE, NTSE, Erasmus+ Fellowship, Dutch Research Council Computational Grants (12.5M CPU hours).</p></div>
         <div class="tile small"><h2>Teaching & Leadership</h2><p>Supervised 6 thesis students; Teaching assistant for advanced computational chemistry courses.</p></div>
-        <div class="tile small"><h2>Projects</h2><p>Designing transition metal carbide catalysts for biomass conversion, optimizing reaction mechanisms using ML-driven simulations.</p></div>
-        <div class="tile small"><h2>Collaborations</h2><p>Worked with Utrecht University, Max Planck Institute, and Sorbonne Université on catalyst development and quantum simulations.</p></div>
-        <div class="tile small"><h2>Software Proficiency</h2><p>Expert in VASP, Quantum ESPRESSO, CP2K, Gaussian, and PLUMED for computational chemistry.</p></div>
         <div class="tile full"><h2>Publications</h2>
             <ul>
                 <li><strong>Meena, R.</strong>, et al. (2025). Rationalizing Catalytic Performances of Mo/W-(Oxy)Carbides for Hydrodeoxygenation. <em>Chem. Cat. Chem.</em> (Submitted). Preprint: <a href="https://doi.org/10.26434/chemrxiv-2024-jr8cp" target="_blank">10.26434/chemrxiv-2024-jr8cp</a></li>
@@ -87,9 +119,6 @@
                 <li><strong>Meena, R.</strong>, et al. (2022). Ground-State Properties of the Narrowest Zigzag Graphene Nanoribbon from Quantum Monte Carlo. <em>J. Chem. Phys., 156</em>, 084112.</li>
             </ul>
         </div>
-        <div class="tile small"><h2>Conferences & Seminars</h2><p>Speaker at NCCC, CHAINS, EuropaCat, ICTAC; Guest lectures at Utrecht University, Max Planck Institute.</p></div>
-        <div class="tile small"><h2>Languages & Certifications</h2><p>Languages: English (Pro), Hindi (Native), Dutch (A2), French (A1). Certified in Molecular Simulation, Advanced Computational Materials Science.</p></div>
-        <div class="tile small"><h2>Hobbies</h2><p>Soccer (Semi-Pro), Chess (1590 Elo), Photography, Trading (CFDs, Stocks, Crypto).</p></div>
     </div>
 </body>
 </html>
