@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raghavendra Meena - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0f0f0f;
+            color: white;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 50px;
+        }
+        .tile {
+            background: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s, max-height 0.5s ease-in-out;
+            overflow: hidden;
+            cursor: pointer;
+            max-height: 60px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .tile:hover {
+            transform: scale(1.05);
+            background: #292929;
+        }
+        .tile.expanded {
+            max-height: 1000px;
+            white-space: normal;
+            text-overflow: unset;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #2a2a2a, #111);
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        a {
+            color: #08fdd8;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function toggleExpand(element) {
+            element.classList.toggle("expanded");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Raghavendra Meena</h1>
+        <p>Computational Chemist | Machine Learning | Catalysis</p>
+        <p><a href="mailto:raghavendra.ip2020@gmail.com">raghavendra.ip2020@gmail.com</a> | <a href="https://orcid.org/0000-0002-2019-8806">ORCID</a></p>
+    </header>
+    <div class="container">
+        <div class="tile" onclick="toggleExpand(this)"><h2>Research Interests</h2><p>Computational chemist with expertise in DFT, AIMD, microkinetic modeling, and ML-based force fields for data-driven materials design & discovery.</p></div>
+        <div class="tile" onclick="toggleExpand(this)"><h2>Education</h2><p>PhD Computational Chemistry (2020-2024) - Wageningen University, NL<br>MSc Materials Science (2019-2020) - Sorbonne Université, FR<br>BS-MS Chemistry & Physics (2015-2020) - IISER Pune, IN</p></div>
+        <div class="tile" onclick="toggleExpand(this)"><h2>Research Experience</h2><p>Doctoral Student at Wageningen University (2020-Present) | Research on transition metal carbides for biomass conversion using DFT, MKM, AIMD.</p></div>
+        <div class="tile" onclick="toggleExpand(this)"><h2>Publications</h2><p>Published in ACS Catalysis, JACS, Angew. Chem. Int. Ed., and more. <br>First-author works include studies on Mo2C catalysts and quantum Monte Carlo simulations.</p></div>
+        <div class="tile" onclick="toggleExpand(this)"><h2>Skills</h2><p>Python, DFT (VASP, QE), HPC, ML for Chemistry, QMC, AIMD, Linux, Git.</p></div>
+        <div class="tile" onclick="toggleExpand(this)"><h2>Awards & Grants</h2><p>INSPIRE, NTSE, Erasmus+ Fellowship, Dutch Research Council Computational Grants.</p></div>
+        <div class="tile" onclick="toggleExpand(this)"><h2>Teaching & Leadership</h2><p>Supervised 6 thesis students; Teaching assistant for computational chemistry courses.</p></div>
+        <div class="tile" onclick="toggleExpand(this)"><h2>Conferences & Seminars</h2><p>Speaker at NCCC, CHAINS, EuropaCat, ICTAC; Guest lectures at Utrecht University.</p></div>
+        <div class="tile" onclick="toggleExpand(this)"><h2>Languages & Certifications</h2><p>Languages: English (Pro), Hindi (Native), Dutch (A2), French (A1)<br>Certified in Molecular Simulation, Advanced Computational Materials Science.</p></div>
+        <div class="tile" onclick="toggleExpand(this)"><h2>Hobbies</h2><p>Soccer (Semi-Pro), Chess (1590 Elo), Photography, Trading (CFDs, Stocks, Crypto).</p></div>
+    </div>
+</body>
+</html>
