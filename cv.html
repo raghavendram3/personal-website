@@ -6,6 +6,31 @@
   <title>Raghavendra Meena - CV</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
+    /* Navigation Header Styles */
+    header {
+      background-color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    header .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #e74c3c;
+    }
+    /* Main CV Styles */
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
@@ -14,27 +39,9 @@
       color: #333;
       line-height: 1.6;
     }
-    header {
-      background-color: #fff;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 1px solid #e0e0e0;
-    }
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5em;
-      margin: 0;
-    }
-    header p {
-      margin: 5px 0;
-    }
-    header a {
-      text-decoration: none;
-      color: #0066cc;
-    }
     .container {
       max-width: 1200px;
-      margin: 20px auto;
+      margin: 40px auto;
       padding: 20px;
       background: #fff;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -62,12 +69,6 @@
     ul {
       margin: 0 0 10px 20px;
     }
-    .publications ul,
-    .contributions ul,
-    .skills ul,
-    .certifications ul {
-      list-style-type: disc;
-    }
     .two-columns {
       display: flex;
       justify-content: space-between;
@@ -75,9 +76,27 @@
     .two-columns > div {
       width: 48%;
     }
+    /* Footer Styles */
+    footer {
+      background-color: white;
+      color: #333;
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid #e0e0e0;
+      margin-top: 40px;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <div class="logo">RM</div>
+    <nav>
+      <a href="https://randomwalker.org/index.html">Home</a>
+      <a href="https://randomwalker.org/photography.html">Gallery</a>
+      <a href="https://randomwalker.org/cv.html">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
   <header>
     <h1>Raghavendra Meena</h1>
     <p>
@@ -88,7 +107,6 @@
       <a href="https://www.linkedin.com/in/raghavendra-meena/">LinkedIn</a> &nbsp;|&nbsp;
       <a href="https://scholar.google.com/citations?user=e-ZYru0AAAAJ&hl=en">Google Scholar</a> &nbsp;|&nbsp;
     </p>
-    <p>Costerweg 65-508, 6702AA Wageningen, The Netherlands</p>
   </header>
   <div class="container">
     <!-- Summary -->
@@ -134,11 +152,11 @@
         <div class="subentry">Wageningen University, NL</div>
         <div class="subentry">Supervisors: Dr. Guanna Li, Prof. Han Zuilhof, Prof. Harry Bitter</div>
         <ul>
-          <li>Developed a multiscale modelling methodology to rationalize and optimize the catalytic activity of transition metal carbides for biomass conversion using density functional theory (DFT), microkinetic modelling (MKM), and ab initio molecular dynamics (AIMD).</li>
-          <li>Used machine learning approach (SISSO) to identify interpretable descriptors of activity for transition metal carbides.</li>
-          <li>Trained ML potentials (MACE, fair-chem) on AIMD-and-metadynamics trajectories to accelerate AIMD simulations for transition metal carbides.</li>
-          <li>Provided insights into the active site in surface-activated mechanocatalysis over zirconia for ambient conversion of plastic waste.</li>
-          <li>Provided mechanistic insights into non-oxidative methane coupling inside Fe[MFI] zeolite pore.</li>
+          <li>Developed a multiscale modelling methodology to rationalize and optimize the catalytic activity of transition metal carbides for biomass conversion using DFT, MKM, and AIMD.</li>
+          <li>Used a machine learning approach (SISSO) to identify interpretable descriptors of activity for transition metal carbides.</li>
+          <li>Trained ML potentials (MACE, fair-chem) on AIMD-and-metadynamics trajectories to accelerate AIMD simulations.</li>
+          <li>Provided insights into the active site in surface-activated mechanocatalysis over zirconia for plastic waste conversion.</li>
+          <li>Investigated non-oxidative methane coupling inside Fe[MFI] zeolite pore.</li>
         </ul>
       </div>
       <div class="entry">
@@ -149,8 +167,8 @@
         <div class="subentry">Sorbonne Université, FR</div>
         <div class="subentry">Supervisors: Prof. Michele Casula, Prof. Prasenjit Ghosh</div>
         <ul>
-          <li>Developed a methodology to study and quantify magnetic properties of carbon-based materials using DFT+U and Quantum Monte Carlo (QMC) method.</li>
-          <li>Showed that the zigzag graphene nanoribbon (zGNRs) is a correlated quasi-one-dimensional system, with its ground state consisting of localized π electrons that exhibit antiferromagnetic (AFM) ordering of spins.</li>
+          <li>Developed a methodology using DFT+U and QMC to study magnetic properties of carbon-based materials.</li>
+          <li>Demonstrated that the zigzag graphene nanoribbon (zGNRs) is a correlated quasi-one-dimensional system with localized π electrons exhibiting AFM ordering.</li>
         </ul>
       </div>
       <div class="entry">
@@ -161,7 +179,7 @@
         <div class="subentry">IISER Pune, IN</div>
         <div class="subentry">Supervisor: Prof. Prasenjit Ghosh</div>
         <ul>
-          <li>Evaluated the bandgaps and magnetic properties of the zGNRs as a function of their width using DFT (GGA, mGGA, hybrids).</li>
+          <li>Evaluated the bandgaps and magnetic properties of zGNRs as a function of width using various DFT approaches.</li>
         </ul>
       </div>
       <div class="entry">
@@ -172,7 +190,7 @@
         <div class="subentry">Indian Institute of Science, IN</div>
         <div class="subentry">Supervisors: Prof. Eluvathingal D. Jemmis, Dr. Sagar Ghorai</div>
         <ul>
-          <li>Demonstrated via DFT that isonitrile coupling can be mediated by allenic diborenes, as an alternative to transition metal-based catalysts.</li>
+          <li>Demonstrated via DFT that isonitrile coupling can be mediated by allenic diborenes as an alternative to transition metal catalysts.</li>
         </ul>
       </div>
     </div>
@@ -284,7 +302,9 @@
       <h2>Hobbies</h2>
       <p>Soccer (Semi-Pro), Chess (1590 Elo), Photography, Trading (CFDs, stocks, crypto)</p>
     </div>
-    
   </div>
+  <footer>
+    <p>&copy; 2024 Raghavendra Meena</p>
+  </footer>
 </body>
 </html>
