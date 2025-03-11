@@ -1,124 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raghavendra Meena - CV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        header {
-            background-color: white;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            margin: 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        .tile {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            white-space: normal;
-            overflow: visible;
-        }
-        .tile.full {
-            grid-column: span 3;
-        }
-        .tile.large {
-            grid-column: span 2;
-        }
-        .tile.small {
-            grid-column: span 1;
-        }
-        .experience {
-            border-left: 4px solid #e74c3c;
-            padding-left: 15px;
-            margin-bottom: 20px;
-        }
-        .experience h3 {
-            margin: 5px 0;
-            font-size: 1.4em;
-        }
-        .experience h4 {
-            margin: 5px 0;
-            font-weight: normal;
-            color: #555;
-        }
-        .experience p {
-            margin: 5px 0;
-            color: #777;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raghavendra Meena - CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin: 0;
+    }
+    header p {
+      margin: 5px 0;
+    }
+    header a {
+      text-decoration: none;
+      color: #0066cc;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #003366;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 5px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .entry {
+      margin-bottom: 15px;
+    }
+    .entry-title {
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+    }
+    .subentry {
+      font-style: italic;
+      margin-bottom: 5px;
+    }
+    ul {
+      margin: 0 0 10px 20px;
+    }
+    .publications ul,
+    .contributions ul,
+    .skills ul,
+    .certifications ul {
+      list-style-type: disc;
+    }
+    .two-columns {
+      display: flex;
+      justify-content: space-between;
+    }
+    .two-columns > div {
+      width: 48%;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Raghavendra Meena</h1>
-    </header>
-    <div class="container">
-        <div class="tile full"><h2>Research Interests</h2><p>Computational chemist with expertise in DFT, AIMD, microkinetic modeling, and ML-based force fields for data-driven materials design & discovery.</p></div>
-        <div class="tile large"><h2>Education</h2><p>PhD Computational Chemistry - Wageningen University (2020-2024)<br>MSc Materials Science - Sorbonne Université (2019-2020)<br>BS-MS Chemistry & Physics - IISER Pune (2015-2020)</p></div>
-        <div class="tile large"><h2>Research Experience</h2>
-            <div class="experience">
-                <h3>Doctoral Researcher</h3>
-                <h4>Wageningen University & Research · Full-time</h4>
-                <p>Oct 2020 - Present · Wageningen, Netherlands</p>
-                <p><strong>Advisors:</strong> Prof. Harry Bitter, Prof. Han Zuilhof & Prof. Guanna Li</p>
-                <ul>
-                    <li>Developed a multiscale modeling methodology integrating DFT, MKM, and AIMD for catalyst optimization.</li>
-                    <li>Applied machine learning (SISSO) to discover interpretable descriptors for transition metal carbide activity.</li>
-                    <li>Trained ML potentials (MACE, fair-chem) to accelerate AIMD simulations for transition metal carbides.</li>
-                </ul>
-            </div>
-            <div class="experience">
-                <h3>Master Thesis Student</h3>
-                <h4>Pierre and Marie Curie University · Apprenticeship</h4>
-                <p>Sep 2019 - Jun 2020 · Paris, France</p>
-                <p><strong>Advisors:</strong> Prof. Michele Casula & Prof. Prasenjit Ghosh</p>
-                <ul>
-                    <li>Investigated magnetic properties of the narrowest zigzag graphene nanoribbon using Quantum Monte Carlo calculations.</li>
-                    <li>Developed a computational workflow for benchmarking strongly correlated systems.</li>
-                </ul>
-            </div>
-            <div class="experience">
-                <h3>Research Intern</h3>
-                <h4>Indian Institute of Science Education and Research (IISER), Pune · Full-time</h4>
-                <p>Aug 2018 - Sep 2019 · Pune, India</p>
-                <p><strong>Advisor:</strong> Prof. Prasenjit Ghosh</p>
-                <ul>
-                    <li>Studied electronic structure and reactivity of single-atom catalysts using first-principles calculations.</li>
-                    <li>Implemented machine learning models for predicting adsorption energies on metal surfaces.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="tile small"><h2>Skills</h2><p>DFT (VASP, QE), AIMD (CP2K, PLUMED), Python (NumPy, pandas, ML), HPC, Git, Linux.</p></div>
-        <div class="tile small"><h2>Awards & Grants</h2><p>INSPIRE, NTSE, Erasmus+ Fellowship, Dutch Research Council Computational Grants (12.5M CPU hours).</p></div>
-        <div class="tile small"><h2>Teaching & Leadership</h2><p>Supervised 6 thesis students; Teaching assistant for advanced computational chemistry courses.</p></div>
-        <div class="tile full"><h2>Publications</h2>
-            <ul>
-                <li><strong>Meena, R.</strong>, et al. (2025). Rationalizing Catalytic Performances of Mo/W-(Oxy)Carbides for Hydrodeoxygenation. <em>Chem. Cat. Chem.</em> (Submitted). Preprint: <a href="https://doi.org/10.26434/chemrxiv-2024-jr8cp" target="_blank">10.26434/chemrxiv-2024-jr8cp</a></li>
-                <li><strong>Meena, R.</strong>, et al. (2023). Toward the Rational Design of More Efficient Mo₂C Catalysts for Hydrodeoxygenation: Mechanism and Descriptor Identification. <em>ACS Catalysis, 13</em>, 13446–13455.</li>
-                <li><strong>Meena, R.</strong>, et al. (2022). Ground-State Properties of the Narrowest Zigzag Graphene Nanoribbon from Quantum Monte Carlo. <em>J. Chem. Phys., 156</em>, 084112.</li>
-            </ul>
-        </div>
+  <header>
+    <h1>Raghavendra Meena</h1>
+    <p>
+      <a href="https://orcid.org/0000-0002-2019-8806">orcid.org/0000-0002-2019-8806</a> &nbsp;|&nbsp;
+      <a href="mailto:raghavendra.ip2020@gmail.com">raghavendra.ip2020@gmail.com</a> &nbsp;|&nbsp;
+    </p>
+    <p>
+      <a href="https://www.linkedin.com/in/raghavendra-meena/">LinkedIn</a> &nbsp;|&nbsp;
+      <a href="https://scholar.google.com/citations?user=e-ZYru0AAAAJ&hl=en">Google Scholar</a> &nbsp;|&nbsp;
+    </p>
+    <p>Costerweg 65-508, 6702AA Wageningen, The Netherlands</p>
+  </header>
+  <div class="container">
+    <!-- Summary -->
+    <div class="section">
+      <h2>Summary</h2>
+      <p>Computational chemist with expertise in the application of <strong>DFT, AIMD, microkinetic modeling</strong>, and <strong>machine learning-based force fields</strong> for data-driven materials design & discovery.</p>
     </div>
+    
+    <!-- Education -->
+    <div class="section">
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="entry-title">
+          <span>PhD Computational Chemistry</span>
+          <span>2020-2024</span>
+        </div>
+        <div class="subentry">Wageningen University &amp; Research, The Netherlands</div>
+      </div>
+      <div class="entry">
+        <div class="entry-title">
+          <span>MSc (M2) Materials Science</span>
+          <span>2019-2020</span>
+        </div>
+        <div class="subentry">Sorbonne Université, France</div>
+      </div>
+      <div class="entry">
+        <div class="entry-title">
+          <span>BS-MS Chemistry &amp; Physics</span>
+          <span>2015-2020</span>
+        </div>
+        <div class="subentry">IISER Pune, India</div>
+      </div>
+    </div>
+    
+    <!-- Research Experience -->
+    <div class="section">
+      <h2>Research Experience</h2>
+      <div class="entry">
+        <div class="entry-title">
+          <span>Doctoral Student</span>
+          <span>Oct 2020 - Present</span>
+        </div>
+        <div class="subentry">Wageningen University, NL</div>
+        <div class="subentry">Supervisors: Dr. Guanna Li, Prof. Han Zuilhof, Prof. Harry Bitter</div>
+        <ul>
+          <li>Developed a multiscale modelling methodology to rationalize and optimize the catalytic activity of transition metal carbides for biomass conversion using density functional theory (DFT), microkinetic modelling (MKM), and ab initio molecular dynamics (AIMD).</li>
+          <li>Used machine learning approach (SISSO) to identify interpretable descriptors of activity for transition metal carbides.</li>
+          <li>Trained ML potentials (MACE, fair-chem) on AIMD-and-metadynamics trajectories to accelerate AIMD simulations for transition metal carbides.</li>
+          <li>Provided insights into the active site in surface-activated mechanocatalysis over zirconia for ambient conversion of plastic waste.</li>
+          <li>Provided mechanistic insights into non-oxidative methane coupling inside Fe[MFI] zeolite pore.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-title">
+          <span>Master's Thesis</span>
+          <span>May 2019 - May 2020</span>
+        </div>
+        <div class="subentry">Sorbonne Université, FR</div>
+        <div class="subentry">Supervisors: Prof. Michele Casula, Prof. Prasenjit Ghosh</div>
+        <ul>
+          <li>Developed a methodology to study and quantify magnetic properties of carbon-based materials using DFT+U and Quantum Monte Carlo (QMC) method.</li>
+          <li>Showed that the zigzag graphene nanoribbon (zGNRs) is a correlated quasi-one-dimensional system, with its ground state consisting of localized π electrons that exhibit antiferromagnetic (AFM) ordering of spins.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-title">
+          <span>Research Intern</span>
+          <span>Aug 2018 - May 2019</span>
+        </div>
+        <div class="subentry">IISER Pune, IN</div>
+        <div class="subentry">Supervisor: Prof. Prasenjit Ghosh</div>
+        <ul>
+          <li>Evaluated the bandgaps and magnetic properties of the zGNRs as a function of their width using DFT (GGA, mGGA, hybrids).</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-title">
+          <span>Research Intern</span>
+          <span>May 2018 - Jul 2018</span>
+        </div>
+        <div class="subentry">Indian Institute of Science, IN</div>
+        <div class="subentry">Supervisors: Prof. Eluvathingal D. Jemmis, Dr. Sagar Ghorai</div>
+        <ul>
+          <li>Demonstrated via DFT that isonitrile coupling can be mediated by allenic diborenes, as an alternative to transition metal-based catalysts.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Publications -->
+    <div class="section">
+      <h2>Publications</h2>
+      <div class="entry">
+        <h3>First-Author Publications</h3>
+        <ol>
+          <li><strong>Meena, R.</strong>, et al. (2025). Rationalizing Catalytic Performances of Mo/W-(Oxy)Carbides for Hydrodeoxygenation. (Manuscript submitted to Chem. Cat. Chem.). Preprint: <a href="https://doi.org/10.26434/chemrxiv-2024-jr8cp">10.26434/chemrxiv-2024-jr8cp</a></li>
+          <li><strong>Meena, R.</strong>, et al. (2023). Toward the Rational Design of More Efficient Mo<sub>2</sub>C Catalysts for Hydrodeoxygenation: Mechanism and Descriptor Identification. <em>ACS Catalysis</em>, 13, 13446–13455.</li>
+          <li><strong>Meena, R.</strong>, et al. (2022). Ground-State Properties of the Narrowest Zigzag Graphene Nanoribbon from Quantum Monte Carlo. <em>J. Chem. Phys.</em>, 156, 084112. (Publication from Master's thesis.)</li>
+        </ol>
+      </div>
+      <div class="entry">
+        <h3>Significant Contribution</h3>
+        <ol>
+          <li>Saju, S., Rajendran, S., <strong>Meena, R.</strong>, et al. (2025). Mesoporous Al<sub>10-x</sub>Cu<sub>x</sub>O<sub>y</sub> with Enhanced Activity and Stability for RWGS Reaction. (Manuscript submitted to Applied Catalysis B.)</li>
+          <li>Hergesell, A., Baarslag, R., Seitzinger, C., <strong>Meena, R.</strong>, et al. (2024). Surface-Activated Mechano-Catalysis for Ambient Conversion of Plastic Waste. <em>J. Am. Chem. Soc.</em>, 146, 38, 26139–26147.</li>
+          <li>Zhang, H., <strong>Meena, R.</strong>, et al. (2023). Revealing Active Sites in Methane Non-Oxidative Coupling over Iron-Containing Zeolite. <em>Angew. Chem. Int. Ed.</em>, e202306196.</li>
+          <li>Ghorai, S., <strong>Meena, R.</strong>, et al. (2021). Comparison of RNC Coupling and CO Coupling Mediated by Cr–Cr Quintuple Bond and B–B Multiple Bonds: Main Group Metallomimetics. <em>J. Phys. Chem. A</em>, 125(33).</li>
+        </ol>
+      </div>
+      <div class="entry">
+        <h3>Minor Contribution</h3>
+        <ol>
+          <li>Pirgach, D., <strong>Meena, R.</strong>, et al. (2025). Condition-Dependent Regioselectivity of Electrochemical Bromination of Methyl Levulinate. (Manuscript submitted to RSC Sustainability upon major revision.)</li>
+        </ol>
+      </div>
+    </div>
+    
+    <!-- Skills -->
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>DFT Packages:</strong> VASP, Quantum ESPRESSO, ASE, GAUSSIAN</li>
+        <li><strong>QMC:</strong> VMC, DMC, LRDMC</li>
+        <li><strong>AIMD/Metadynamics:</strong> VASP, CP2K, PLUMED</li>
+        <li><strong>Programming Languages:</strong> Python (numpy, pandas, scikit-learn, pymatgen), bash scripting, MATLAB, LaTeX</li>
+        <li><strong>Visualization:</strong> Blender, gnuplot, VMD, Materials Studio</li>
+        <li><strong>Others:</strong> High Performance Computing, website development, Git, Linux/MacOS/Windows</li>
+        <li><strong>Personal Skills:</strong> Effective communicator with strong leadership and management skills; adaptable, independent, experienced in multicultural environments</li>
+      </ul>
+    </div>
+    
+    <!-- Grants & Scholarships -->
+    <div class="section">
+      <h2>Grants &amp; Scholarships</h2>
+      <p>Dutch Research Council Computational Grants (12.5 mil CPU hours/50 k GPU hours) &nbsp;&nbsp; 2020-2025</p>
+      <p>Erasmus+ Fellowship to pursue an M2 at Sorbonne University (5.2% acceptance rate) &nbsp;&nbsp; 2019-2020</p>
+      <p>INSPIRE Scholarship (Awarded to 1,000 scholars across India through a competitive exam) &nbsp;&nbsp; 2015-2020</p>
+      <p>NTSE Scholarship (Awarded to 1,000 scholars across India through a two-stage selection process) &nbsp;&nbsp; 2013-2015</p>
+    </div>
+    
+    <!-- Teaching & Leadership -->
+    <div class="section">
+      <h2>Teaching &amp; Leadership</h2>
+      <ul>
+        <li>Supervised 6 thesis students (3 MSc major, 1 MSc minor, 2 BSc)</li>
+        <li>Teaching assistant for advanced computational chemistry courses</li>
+      </ul>
+    </div>
+    
+    <!-- Conference & Seminar Contributions -->
+    <div class="section">
+      <h2>Conference &amp; Seminar Contributions</h2>
+      <h3>Oral Presentations</h3>
+      <ul>
+        <li>Oral Presentation at Hess Group, Technical University Berlin, 3rd June 2024</li>
+        <li>Oral Presentation at Max Planck Institute for Polymer Research, 31st May 2024</li>
+        <li>Invited guest lecture at Utrecht University, 12th April 2024</li>
+        <li>Speaker at KNCV Division Computational &amp; Theoretical Chemistry Seminar, 28th Feb 2023</li>
+        <li>Speaker at NCCC The Netherlands’ Catalysis and Chemistry Conference, Noordwijkerhout, Netherlands, 8th March 2023</li>
+        <li>Speaker at CHemistry As INnovating Science (CHAINS), Veldhoven, Netherlands, 22nd Sept 2022</li>
+      </ul>
+      <h3>Poster Presentations</h3>
+      <ul>
+        <li>Poster Presentation at Food group(s), Technical University Berlin, 2024</li>
+        <li>Poster Presentation at Physical Chemistry/Molecular Material Sciences group, Technical University Berlin, 2024</li>
+        <li>Poster Presentation at Humboldt University Berlin, 2024</li>
+        <li>Poster Presentation at NCCC The Netherlands’ Catalysis and Chemistry Conference, Noordwijkerhout, Netherlands, 2024</li>
+        <li>Poster Presentation at IUPAC/CHAINS - World Forum, The Hague, Netherlands, 2023</li>
+        <li>Poster Presentation at EuropaCat, Prague, CZ, 2023</li>
+        <li>Poster Presentation at KNCV Division Computational &amp; Theoretical Chemistry Seminar, 2023</li>
+        <li>Poster Presentation at International Conference on Theoretical Aspects of Catalysis (ICTAC) - Lyon, France, 2022</li>
+        <li>Poster Presentation at NCCC The Netherlands’ Catalysis and Chemistry Conference, Noordwijkerhout, Netherlands, 2022</li>
+      </ul>
+    </div>
+    
+    <!-- Certifications -->
+    <div class="section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>CECAM MolSim "Understanding Molecular Simulation" course, 2023</li>
+        <li>Han-sur-Lesse winter school for theoretical &amp; computational chemistry, 2022</li>
+        <li>Paris International School on Advanced Computational Materials Science, 2021</li>
+      </ul>
+    </div>
+    
+    <!-- Languages -->
+    <div class="section">
+      <h2>Languages</h2>
+      <p>English (Professional), Hindi (Native), Dutch (A2), French (A1)</p>
+    </div>
+    
+    <!-- Hobbies -->
+    <div class="section">
+      <h2>Hobbies</h2>
+      <p>Soccer (Semi-Pro), Chess (1590 Elo), Photography, Trading (CFDs, stocks, crypto)</p>
+    </div>
+    
+  </div>
 </body>
 </html>
