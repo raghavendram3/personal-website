@@ -1,240 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5Q1C5BCJK9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5Q1C5BCJK9');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5Q1C5BCJK9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5Q1C5BCJK9');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Portfolio</title>
+    <title>Raghavendra Meena - Photography</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3e50;
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
         }
+
         header {
             background-color: white;
-            padding: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #e0e0e0;
         }
-        header .logo {
+
+        .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5em;
+            font-size: 1.8em;
             font-weight: 700;
-        }
-        nav a {
-            color: #333;
+            color: var(--primary-color);
             text-decoration: none;
-            margin: 0 15px;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 1.2rem;
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
         }
+
         nav a:hover {
-            color: #e74c3c;
+            color: var(--accent-color);
+            background-color: rgba(231, 76, 60, 0.1);
         }
+
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('/images/Moon.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 1rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 2rem;
         }
-        .intro {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 40px;
-        }
-        .intro h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3em;
-            font-weight: 700;
-            margin: 0;
-        }
-        .intro h1 span {
-            color: #e74c3c;
-        }
-        .intro p {
-            font-size: 1.2em;
-            font-weight: 300;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            border-bottom: 2px solid #e74c3c;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        section p {
-            line-height: 1.6;
-        }
+
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-            grid-auto-rows: 200px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
         }
-        .gallery img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
-        .gallery img:hover {
-            transform: scale(1.05);
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
         }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
+
+        .gallery-item img {
             width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-        .modal-content {
-            margin: auto;
+            height: 300px;
+            object-fit: cover;
             display: block;
-            width: 80%;
-            max-width: 700px;
         }
-        .close {
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 2em;
+            margin: 2rem 0;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
             position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
         }
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
+
         footer {
             background-color: white;
-            color: #333;
+            color: var(--text-color);
             text-align: center;
-            padding: 20px 0;
-            border-top: 1px solid #e0e0e0;
+            padding: 1.5rem 0;
+            margin-top: 4rem;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
         }
-        #home {
-            background-image: url('images/Lisbon.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 120px 20px;
-            color: white;
-            text-align: center;
-        }
-        #home h1, #home p {
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 1rem;
+            }
+
+            nav a {
+                margin: 0 0.5rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            .hero {
+                padding: 4rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
-            <!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
-        <div class="logo">RM Photography</div>
-        <nav>
-            <a href="https://randomwalker.org/index.html">Home</a>
-            <a href="https://randomwalker.org/photography.html">Gallery</a>
-            <a href="https://randomwalker.org/cv.html">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="header-content">
+            <a href="/" class="logo">RM</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/pubs.html">Work</a>
+                <a href="/photography.html">Gallery</a>
+                <a href="/cv.html">Extended CV</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
+
+    <div class="hero">
+        <h1>Photography Portfolio</h1>
+        <p>Capturing moments through my lens</p>
+    </div>
+
     <div class="container">
-        <section id="home">
-            <h1>Welcome to My Photography Portfolio</h1>
-            <p>Explore my collection of photographs from my travels.</p>
-        </section>
-        <section id="gallery">
+        <section>
             <h2>Gallery</h2>
             <div class="gallery" id="photoGallery">
-                <!-- Photos will be inserted here by JavaScript -->
+                <!-- Images will be loaded dynamically -->
             </div>
         </section>
-        <section id="about">
-            <h2>Info</h2>
-            <p>I have uploaded the photographs I have taken during my trips worldwide. Soon, I plan to upload more than 100 more pictures and arrange these photographs in a certain way, so it is easy to navigate through them.</p>
 
-            <p><b>NOTE:</b> Please feel free to use the photographs I uploaded (just NOT for commercial purposes), and it is up to you if you feel like giving credit. Cheers, have a good day :)</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p><a href="mailto:raghavendra.meena@wur.nl" class="fa fa-mail-reply"></a> | 
-            <a href="https://www.linkedin.com/in/raghavendra-meena/" class="fa fa-linkedin"></a> | 
-            <a href="https://www.twitter.com/sweetstark00" class="fa fa-twitter"></a> | 
-            <a href="https://www.instagram.com/raghavendra" class="fa fa-instagram"></a> | 
-            <a href="https://randomwalker.org/index.html" class="fa fa-globe"></a></p>
+        <section>
+            <h2>About My Photography</h2>
+            <p>Through my lens, I explore the intricate details of urban landscapes, the serenity of natural wonders, and the vibrant energy of street life. These photographs are available for non-commercial use, with attribution appreciated but not required.</p>
         </section>
     </div>
+
     <footer>
-        <p>&copy; 2024 Raghavendra Meena</p>
+        <p>&copy; 2025 Raghavendra Meena</p>
     </footer>
-    <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-    </div>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('images.json')
-                .then(response => response.json())
-                .then(images => {
-                    const shuffledImages = images.sort(() => 0.5 - Math.random());
-                    const gallery = document.getElementById('photoGallery');
-                    shuffledImages.forEach(image => {
-                        const img = document.createElement('img');
-                        img.src = image;
-                        img.alt = 'Photography by Raghavendra Meena';
-                        img.onclick = function() {
-                            openModal(image);
-                        };
-                        gallery.appendChild(img);
-                    });
-                });
+        const images = [
+            { src: '/images/Moon.jpg', alt: 'Moon Photography' },
+            { src: '/images/berlin.jpg', alt: 'Berlin Street Scene' },
+            { src: '/images/Lisbon.jpg', alt: 'Lisbon Architecture' },
+            { src: '/images/paris.jpg', alt: 'Paris View' },
+            { src: '/images/italia.jpg', alt: 'Italian Landscape' },
+            { src: '/images/fkf.jpg', alt: 'Urban Photography' },
+            { src: '/images/20151121.jpg', alt: 'Photography 2015' },
+            { src: '/images/DSC_0069.jpg', alt: 'Landscape Photography' },
+            { src: '/images/DSC_0079.jpg', alt: 'Nature Photography' },
+            { src: '/images/DSC_0082.jpg', alt: 'Scenic View' },
+            { src: '/images/DSC_0084.jpg', alt: 'Landscape Scene' },
+            { src: '/images/IMG_20210831_180425.jpg', alt: 'Evening Photography' },
+            { src: '/images/IMG_20210904_204541.jpg', alt: 'Night Photography' },
+            { src: '/images/IMG_20210904_215804.jpg', alt: 'Late Night Scene' },
+            { src: '/images/IMG_20210905_144647.jpg', alt: 'Afternoon Photography' },
+            { src: '/images/WA0001.jpg', alt: 'Street Photography' },
+            { src: '/images/WA0005.jpg', alt: 'Urban Scene' },
+            { src: '/images/WA0007.jpg', alt: 'City Photography' },
+            { src: '/images/WA0008.jpg', alt: 'Street View' },
+            { src: '/images/IMG_20210901_202844__01-EFFECTS.jpg', alt: 'Special Effects Photography' }
+        ];
 
-            const modal = document.getElementById('myModal');
-            const modalImg = document.getElementById('img01');
-            const span = document.getElementsByClassName('close')[0];
-
-            function openModal(src) {
-                modal.style.display = 'block';
-                modalImg.src = src;
-            }
-
-            span.onclick = function() {
-                modal.style.display = 'none';
-            }
-
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = 'none';
-                }
-            }
+        const gallery = document.getElementById('photoGallery');
+        images.forEach(image => {
+            const item = document.createElement('div');
+            item.className = 'gallery-item';
+            item.innerHTML = `<img src="${image.src}" alt="${image.alt}" loading="lazy">`;
+            gallery.appendChild(item);
         });
     </script>
 </body>
