@@ -14,115 +14,231 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raghavendra Meena - CV</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-    /* Navigation Header Styles */
-    header {
-      background-color: white;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #e0e0e0;
+    :root {
+      --primary-color: #2c3e50;
+      --accent-color: #e74c3c;
+      --bg-color: #f8f9fa;
+      --text-color: #2c3e50;
     }
-    header .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5em;
-      font-weight: 700;
-    }
-    nav a {
-      color: #333;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #e74c3c;
-    }
-    /* Main CV Styles */
+
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5;
-      color: #333;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       line-height: 1.6;
     }
+
+    header {
+      background-color: white;
+      padding: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8em;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      margin: 0 1.2rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+      background-color: rgba(231, 76, 60, 0.1);
+    }
+
     .container {
       max-width: 1200px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      border-radius: 15px;
     }
-    h2 {
-      color: #003366;
-      border-bottom: 2px solid #003366;
-      padding-bottom: 5px;
-    }
+
     .section {
-      margin-bottom: 30px;
+      margin-bottom: 2.5rem;
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
     }
+
+    .section:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-color);
+      font-size: 2.5em;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-color);
+      font-size: 1.8em;
+      margin-bottom: 1rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: var(--accent-color);
+    }
+
     .entry {
-      margin-bottom: 15px;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      border-radius: 8px;
+      background-color: var(--bg-color);
     }
+
     .entry-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .entry-title span {
       font-weight: bold;
-      display: flex;
-      justify-content: space-between;
+      color: var(--primary-color);
     }
+
     .subentry {
+      color: var(--accent-color);
       font-style: italic;
-      margin-bottom: 5px;
+      margin-bottom: 0.5rem;
     }
+
     ul {
-      margin: 0 0 10px 20px;
+      list-style-type: none;
+      padding-left: 1.2rem;
     }
-    .two-columns {
+
+    ul li {
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+
+    ul li::before {
+      content: "•";
+      color: var(--accent-color);
+      position: absolute;
+      left: -1.2rem;
+    }
+
+    .contact-links {
       display: flex;
-      justify-content: space-between;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 1rem 0;
     }
-    .two-columns > div {
-      width: 48%;
+
+    .contact-links a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
-    /* Footer Styles */
+
+    .contact-links a:hover {
+      color: var(--accent-color);
+    }
+
     footer {
       background-color: white;
-      color: #333;
+      color: var(--text-color);
       text-align: center;
-      padding: 20px 0;
-      border-top: 1px solid #e0e0e0;
-      margin-top: 40px;
+      padding: 1.5rem 0;
+      margin-top: 4rem;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 1rem;
+      }
+
+      nav a {
+        margin: 0 0.5rem;
+      }
+
+      .entry-title {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">RM</div>
-    <nav>
-      <a href="https://randomwalker.org/index.html">Home</a>
-      <a href="https://randomwalker.org/pubs.html">Work</a>
-      <a href="https://randomwalker.org/photography.html">Gallery</a>
-      <a href="https://randomwalker.org/cv.html">Extended CV</a>
-      <a href="#contact">Contact</a>
-    </nav><br>
-    <h1>Raghavendra Meena</h1>
-    <p>
-      <a href="https://orcid.org/0000-0002-2019-8806">orcid.org/0000-0002-2019-8806</a> &nbsp;|&nbsp;
-      <a href="mailto:raghavendra.ip2020@gmail.com">raghavendra.ip2020@gmail.com</a> &nbsp;|&nbsp;
-    </p>
-    <p>
-      <a href="https://www.linkedin.com/in/raghavendra-meena/">LinkedIn</a> &nbsp;|&nbsp;
-      <a href="https://scholar.google.com/citations?user=e-ZYru0AAAAJ&hl=en">Google Scholar</a> &nbsp;|&nbsp;
-    </p>
+    <div class="header-content">
+      <div class="logo">RM</div>
+      <nav>
+        <a href="https://randomwalker.org/index.html">Home</a>
+        <a href="https://randomwalker.org/pubs.html">Work</a>
+        <a href="https://randomwalker.org/photography.html">Gallery</a>
+        <a href="https://randomwalker.org/cv.html">Extended CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
+
   <div class="container">
+    <div class="contact-links">
+      <a href="https://orcid.org/0000-0002-2019-8806">ORCID</a>
+      <a href="mailto:raghavendra.ip2020@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/raghavendra-meena/">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=e-ZYru0AAAAJ&hl=en">Google Scholar</a>
+    </div>
+
     <!-- Summary -->
     <div class="section">
       <h2>Summary</h2>
-      <p>Computational chemist with expertise in the application of <strong>DFT, AIMD, microkinetic modeling</strong>, and <strong>machine learning-based force fields</strong> for data-driven materials design & discovery.</p>
+      <p>Computational materials scientist with expertise in the application of <strong>DFT, AIMD, microkinetic modeling</strong>, and <strong>machine learning-based force fields</strong> for data-driven materials design & discovery.</p>
     </div>
-    
+
     <!-- Education -->
     <div class="section">
       <h2>Education</h2>
@@ -135,7 +251,7 @@
       </div>
       <div class="entry">
         <div class="entry-title">
-          <span>MSc (M2) Materials Science</span>
+          <span>MSc (M2) Computational Materials Science</span>
           <span>2019-2020</span>
         </div>
         <div class="subentry">Sorbonne Université, France</div>
@@ -148,7 +264,7 @@
         <div class="subentry">IISER Pune, India</div>
       </div>
     </div>
-    
+
     <!-- Research Experience -->
     <div class="section">
       <h2>Research Experience</h2>
@@ -202,7 +318,7 @@
         </ul>
       </div>
     </div>
-    
+
     <!-- Publications -->
     <div class="section">
       <h2>Publications</h2>
@@ -230,7 +346,7 @@
         </ol>
       </div>
     </div>
-    
+
     <!-- Skills -->
     <div class="section">
       <h2>Skills</h2>
@@ -244,7 +360,7 @@
         <li><strong>Personal Skills:</strong> Effective communicator with strong leadership and management skills; adaptable, independent, experienced in multicultural environments</li>
       </ul>
     </div>
-    
+
     <!-- Grants & Scholarships -->
     <div class="section">
       <h2>Grants &amp; Scholarships</h2>
@@ -253,7 +369,7 @@
       <p>INSPIRE Scholarship (Awarded to 1,000 scholars across India through a competitive exam) &nbsp;&nbsp; 2015-2020</p>
       <p>NTSE Scholarship (Awarded to 1,000 scholars across India through a two-stage selection process) &nbsp;&nbsp; 2013-2015</p>
     </div>
-    
+
     <!-- Teaching & Leadership -->
     <div class="section">
       <h2>Teaching &amp; Leadership</h2>
@@ -262,33 +378,33 @@
         <li>Teaching assistant for advanced computational chemistry courses</li>
       </ul>
     </div>
-    
+
     <!-- Conference & Seminar Contributions -->
     <div class="section">
       <h2>Conference &amp; Seminar Contributions</h2>
       <h3>Oral Presentations</h3>
       <ul>
-        <li>Oral Presentation at Hess Group, Technical University Berlin, 3rd June 2024</li>
-        <li>Oral Presentation at Max Planck Institute for Polymer Research, 31st May 2024</li>
+        <li>Hess Group, Technical University Berlin, 3rd June 2024</li>
+        <li>Max Planck Institute for Polymer Research, 31st May 2024</li>
         <li>Invited guest lecture at Utrecht University, 12th April 2024</li>
-        <li>Speaker at KNCV Division Computational &amp; Theoretical Chemistry Seminar, 28th Feb 2023</li>
-        <li>Speaker at NCCC The Netherlands’ Catalysis and Chemistry Conference, Noordwijkerhout, Netherlands, 8th March 2023</li>
-        <li>Speaker at CHemistry As INnovating Science (CHAINS), Veldhoven, Netherlands, 22nd Sept 2022</li>
+        <li>KNCV Division Computational &amp; Theoretical Chemistry Seminar, 28th Feb 2023</li>
+        <li>NCCC The Netherlands’ Catalysis and Chemistry Conference, Noordwijkerhout, Netherlands, 8th March 2023</li>
+        <li>CHemistry As INnovating Science (CHAINS), Veldhoven, Netherlands, 22nd Sept 2022</li>
       </ul>
       <h3>Poster Presentations</h3>
       <ul>
-        <li>Poster Presentation at Food group(s), Technical University Berlin, 2024</li>
-        <li>Poster Presentation at Physical Chemistry/Molecular Material Sciences group, Technical University Berlin, 2024</li>
-        <li>Poster Presentation at Humboldt University Berlin, 2024</li>
-        <li>Poster Presentation at NCCC The Netherlands’ Catalysis and Chemistry Conference, Noordwijkerhout, Netherlands, 2024</li>
-        <li>Poster Presentation at IUPAC/CHAINS - World Forum, The Hague, Netherlands, 2023</li>
-        <li>Poster Presentation at EuropaCat, Prague, CZ, 2023</li>
-        <li>Poster Presentation at KNCV Division Computational &amp; Theoretical Chemistry Seminar, 2023</li>
-        <li>Poster Presentation at International Conference on Theoretical Aspects of Catalysis (ICTAC) - Lyon, France, 2022</li>
-        <li>Poster Presentation at NCCC The Netherlands’ Catalysis and Chemistry Conference, Noordwijkerhout, Netherlands, 2022</li>
+        <li>Food group(s), Technical University Berlin, 2024</li>
+        <li>Physical Chemistry/Molecular Material Sciences group, Technical University Berlin, 2024</li>
+        <li>Humboldt University Berlin, 2024</li>
+        <li>PNCCC The Netherlands’ Catalysis and Chemistry Conference, Noordwijkerhout, Netherlands, 2024</li>
+        <li>IUPAC/CHAINS - World Forum, The Hague, Netherlands, 2023</li>
+        <li>EuropaCat, Prague, CZ, 2023</li>
+        <li>KNCV Division Computational &amp; Theoretical Chemistry Seminar, 2023</li>
+        <li>International Conference on Theoretical Aspects of Catalysis (ICTAC) - Lyon, France, 2022</li>
+        <li>NCCC The Netherlands’ Catalysis and Chemistry Conference, Noordwijkerhout, Netherlands, 2022</li>
       </ul>
     </div>
-    
+
     <!-- Certifications -->
     <div class="section">
       <h2>Certifications</h2>
@@ -298,13 +414,13 @@
         <li>Paris International School on Advanced Computational Materials Science, 2021</li>
       </ul>
     </div>
-    
+
     <!-- Languages -->
     <div class="section">
       <h2>Languages</h2>
       <p>English (Professional), Hindi (Native), Dutch (A2), French (A1)</p>
     </div>
-    
+
     <!-- Hobbies -->
     <div class="section">
       <h2>Hobbies</h2>
@@ -312,7 +428,7 @@
     </div>
   </div>
   <footer>
-    <p>&copy; 2024 Raghavendra Meena</p>
+    <p>&copy; 2025 Raghavendra Meena</p>
   </footer>
 </body>
 </html>
