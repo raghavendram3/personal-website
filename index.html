@@ -12,6 +12,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Raghavendra Meena - Computational Materials Scientist specializing in DFT, AIMD, and machine learning for materials design">
     <title>Raghavendra Meena</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,12 +22,17 @@
             --accent-color: #e74c3c;
             --bg-color: #f8f9fa;
             --text-color: #2c3e50;
+            --container-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
@@ -34,19 +40,20 @@
 
         header {
             background-color: white;
-            padding: 1.5rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .header-content {
-            max-width: 1200px;
+            max-width: var(--container-width);
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0.5rem;
         }
 
         .logo {
@@ -54,16 +61,21 @@
             font-size: 1.8em;
             font-weight: 700;
             color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
         }
 
         nav a {
             color: var(--text-color);
             text-decoration: none;
-            margin: 0 1.2rem;
             font-weight: 500;
-            transition: all 0.3s ease;
             padding: 0.5rem 1rem;
             border-radius: 5px;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
@@ -72,7 +84,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: var(--container-width);
             margin: 0 auto;
             padding: 2rem;
         }
@@ -87,9 +99,9 @@
 
         .intro-text h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3.5em;
-            margin: 0;
+            font-size: 3em;
             line-height: 1.2;
+            margin-bottom: 1rem;
         }
 
         .intro-text span {
@@ -161,19 +173,26 @@
 
         .contact-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             justify-content: center;
-            margin-top: 2rem;
+            margin: 2rem 0;
         }
 
         .contact-links a {
-            font-size: 1.5em;
-            color: var(--primary-color);
-            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
         }
 
         .contact-links a:hover {
-            color: var(--accent-color);
+            transform: translateY(-2px);
+            background: var(--accent-color);
         }
 
         footer {
@@ -186,6 +205,16 @@
         }
 
         @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
             .intro {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -195,12 +224,9 @@
                 grid-template-columns: 1fr;
             }
 
-            nav a {
-                margin: 0 0.5rem;
-            }
-
-            .intro-text h1 {
-                font-size: 2.5em;
+            section h2::after {
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
     </style>
@@ -208,12 +234,12 @@
 <body>
     <header>
         <div class="header-content">
-            <div class="logo">RM</div>
+            <a href="/" class="logo">RM</a>
             <nav>
-                <a href="#about">Home</a>
-                <a href="https://randomwalker.org/pubs.html">Work</a>
-                <a href="https://randomwalker.org/photography.html">Gallery</a>
-                <a href="https://randomwalker.org/cv.html">Extended CV</a>
+                <a href="/">Home</a>
+                <a href="/pubs.html">Publications</a>
+                <a href="/photography.html">Photography</a>
+                <a href="/cv.html">CV</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -222,49 +248,48 @@
     <div class="container">
         <div class="intro">
             <div class="intro-text">
-                <h1>Hi! I am <span>Raghavendra Meena</span>, a PhD Candidate at Wageningen University & Research.</h1>
+                <h1>Hi! I am <span>Raghavendra Meena</span></h1>
+                <p>A PhD Candidate at Wageningen University & Research, specializing in computational materials science and catalysis.</p>
             </div>
-            <img src="pp.jpg" alt="Raghavendra Meena">
+            <img src="pp.jpg" alt="Raghavendra Meena" loading="lazy">
         </div>
 
         <section id="about">
             <h2>About Me</h2>
-            <p>I am a fourth-year PhD candidate at Wageningen University & Research. I do science, love football, and take photographs. Besides these core domains, I like listening to music, reading books, and learning to play the guitar. I also like to paint and am currently enjoying building this website.</p>
+            <p>I am a computational scientist focusing on developing efficient catalysts for sustainable chemistry. Beyond research, I enjoy football, photography, and exploring new technologies. I'm passionate about using computational methods to solve real-world problems in materials science and catalysis.</p>
             
             <div class="interests">
                 <div class="interest-card">
-                    <img src="/images/tocc.png" alt="Research">
+                    <img src="/images/tocc.png" alt="Research visualization" loading="lazy">
                     <h3>Research</h3>
+                    <p>Computational materials science & catalysis</p>
                 </div>
                 <div class="interest-card">
-                    <img src="/images/soccer.jpg" alt="Soccer">
+                    <img src="/images/soccer.jpg" alt="Soccer" loading="lazy">
                     <h3>Soccer</h3>
+                    <p>Semi-professional player</p>
                 </div>
                 <div class="interest-card">
-                    <img src="/images/Moon.jpg" alt="Photography">
+                    <img src="/images/Moon.jpg" alt="Photography" loading="lazy">
                     <h3>Photography</h3>
+                    <p>Nature and urban photography</p>
                 </div>
             </div>
         </section>
 
-        <section id="projects">
-            <h2>Work Summary</h2>
-            <p>As a doctoral researcher at Wageningen University & Research, I regularly perform first-principle simulations for chemical reactions. I employ computational approaches such as density functional theory (DFT), <it>ab initio</it> molecular dynamics (AIMD), and microkinetic modelling (MKM) to investigate catalytic mechanisms and kinetics. I aim to design affordable and efficient catalysts for converting biomass to platform chemicals for biofuels, contributing to a sustainable and circular economy.</p>
-        </section>
-
         <section id="contact">
-            <h2>Contact</h2>
+            <h2>Connect With Me</h2>
             <div class="contact-links">
-                <a href="mailto:raghavendra.meena@wur.nl" class="fa fa-mail-reply"></a>
-                <a href="https://www.linkedin.com/in/raghavendra-meena/" class="fa fa-linkedin"></a>
-                <a href="https://www.instagram.com/raghavendram3" class="fa fa-instagram"></a>
-                <a href="https://randomwalker.org/index.html" class="fa fa-globe"></a>
+                <a href="mailto:raghavendra.meena@wur.nl"><i class="fa fa-envelope"></i> Email</a>
+                <a href="https://www.linkedin.com/in/raghavendra-meena/"><i class="fa fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.instagram.com/raghavendram3"><i class="fa fa-instagram"></i> Instagram</a>
+                <a href="https://scholar.google.com/citations?user=e-ZYru0AAAAJ&hl=en"><i class="fa fa-graduation-cap"></i> Scholar</a>
             </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 Raghavendra Meena</p>
+        <p>&copy; 2025 Raghavendra Meena | Computational Materials Scientist</p>
     </footer>
 </body>
 </html>
