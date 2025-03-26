@@ -1,187 +1,270 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5Q1C5BCJK9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5Q1C5BCJK9');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5Q1C5BCJK9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5Q1C5BCJK9');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raghavendra Meena</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        .column {
-            width: 100%;
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3e50;
         }
-        .image-box {
-            width: 100%;
-            height: 100%; /* Fixed height for the image box */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
         }
+
         header {
             background-color: white;
-            padding: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #e0e0e0;
         }
-        header .logo {
+
+        .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5em;
+            font-size: 1.8em;
             font-weight: 700;
+            color: var(--primary-color);
         }
+
         nav a {
-            color: #333;
+            color: var(--text-color);
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 1.2rem;
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
         }
+
         nav a:hover {
-            color: #e74c3c;
+            color: var(--accent-color);
+            background-color: rgba(231, 76, 60, 0.1);
         }
-        .container2 {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 2rem;
         }
+
         .intro {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 4rem;
             align-items: center;
-            justify-content: space-between;
-            margin-bottom: 40px;
+            margin: 4rem 0;
         }
-        .intro h1 {
+
+        .intro-text h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3em;
-            font-weight: 700;
+            font-size: 3.5em;
             margin: 0;
+            line-height: 1.2;
         }
-        .intro h1 span {
-            color: #e74c3c;
+
+        .intro-text span {
+            color: var(--accent-color);
         }
-        .intro p {
-            font-size: 1.2em;
-            font-weight: 300;
-        }
+
         .intro img {
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
             max-width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
+
+        .intro img:hover {
+            transform: translateY(-5px);
+        }
+
+        .interests {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .interest-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .interest-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
         section {
-            margin-bottom: 40px;
+            margin: 4rem 0;
         }
+
         section h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5em;
-            border-bottom: 2px solid #e74c3c;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
         }
-        section p {
-            line-height: 1.6;
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
         }
+
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .contact-links a {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent-color);
+        }
+
         footer {
             background-color: white;
-            color: #333;
+            color: var(--text-color);
             text-align: center;
-            padding: 20px 0;
-            border-top: 1px solid #e0e0e0;
+            padding: 1.5rem 0;
+            margin-top: 4rem;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .intro {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .interests {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                margin: 0 0.5rem;
+            }
+
+            .intro-text h1 {
+                font-size: 2.5em;
+            }
         }
     </style>
-    <!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
-        <div class="logo">RM</div>
-        <nav>
-            <a href="#about">Home</a>
-            <a href="https://randomwalker.org/pubs.html">Work</a>
-            <a href="https://randomwalker.org/photography.html">Gallery</a>
-            <a href="https://randomwalker.org/cv.html">Extended CV</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="header-content">
+            <div class="logo">RM</div>
+            <nav>
+                <a href="#about">Home</a>
+                <a href="https://randomwalker.org/pubs.html">Work</a>
+                <a href="https://randomwalker.org/photography.html">Gallery</a>
+                <a href="https://randomwalker.org/cv.html">Extended CV</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
+
     <div class="container">
         <div class="intro">
-            <div>
+            <div class="intro-text">
                 <h1>Hi! I am <span>Raghavendra Meena</span>, a PhD Candidate at Wageningen University & Research.</h1>
-                  </div>
-                                <img src="pp.jpg" alt="Raghavendra Meena">
-                 </div>
+            </div>
+            <img src="pp.jpg" alt="Raghavendra Meena">
         </div>
-    
+
         <section id="about">
             <h2>About Me</h2>
             <p>I am a fourth-year PhD candidate at Wageningen University & Research. I do science, love football, and take photographs. Besides these core domains, I like listening to music, reading books, and learning to play the guitar. I also like to paint and am currently enjoying building this website.</p>
-            <div class="container2">
-        <!-- Research Column -->
-        <div class="image-box">
-            <div class="column">
-            <b>Research</b><br>
-            <img src="/images/tocc.png" alt="Research Image" height="200"><br>
+            
+            <div class="interests">
+                <div class="interest-card">
+                    <img src="/images/tocc.png" alt="Research">
+                    <h3>Research</h3>
                 </div>
-            <div class="column">
-            <b>Soccer</b><br>
-            <img src="/images/soccer.jpg" alt="Soccer Image" height="200"><br>
+                <div class="interest-card">
+                    <img src="/images/soccer.jpg" alt="Soccer">
+                    <h3>Soccer</h3>
                 </div>
-           <div class="column">
-            <b>Photography</b><br>
-            <img src="/images/Moon.jpg" alt="Photography Image" height="200"><br>
+                <div class="interest-card">
+                    <img src="/images/Moon.jpg" alt="Photography">
+                    <h3>Photography</h3>
                 </div>
-        </div>
-    </div>
+            </div>
         </section>
+
         <section id="projects">
-            <h2>Projects</h2>
-            <p>As a doctoral researcher at Wageningen University & Research, I regularly perform first principle simulations for chemical reactions. I employ
-computational approaches such as density functional theory (DFT), <it>ab initio</it> molecular dynamics (AIMD),
-and microkinetic modelling (MKM) to investigate catalytic mechanisms and kinetics. I aim to design affordable and efficient catalysts for converting biomass to platform chemicals for biofuels, contributing to a
-sustainable and circular economy. Specifically, I work on designing efficient transition metal carbide (TMC) based catalysts for biomass
-conversion. First, I use static DFT to study the reaction mechanisms of fundamental processes involved in
-biomass conversion, such as the hydrodeoxygenation (HDO) reaction. The energetics obtained from static
-DFT calculations are then used to perform MKM. Furthermore, I use insights from DFT and MKM results to
-optimize the HDO activity of these catalysts through heteroatom doping. I also conduct band analysis (density of states) to understand these processes further and identify the descriptors responsible for the activity of
-these catalysts. The results of these studies have been summarized in the publication “Toward the Rational
-Design of More Efficient Mo<sub>2</sub>C Catalysts for Hydrodeoxygenation–Mechanism and Descriptor Identification”. More details about my projects can be found on my <a href="https://www.linkedin.com/in/raghavendra-meena/" target="_blank">LinkedIn profile</a>.</p>
+            <h2>Work Summary</h2>
+            <p>As a doctoral researcher at Wageningen University & Research, I regularly perform first-principle simulations for chemical reactions. I employ computational approaches such as density functional theory (DFT), <it>ab initio</it> molecular dynamics (AIMD), and microkinetic modelling (MKM) to investigate catalytic mechanisms and kinetics. I aim to design affordable and efficient catalysts for converting biomass to platform chemicals for biofuels, contributing to a sustainable and circular economy.</p>
         </section>
-        <section id="photographs">
-            <h2>Photographs</h2>
-            <p>I enjoy taking photographs during my travels. Check out my <a href="https://randomwalker.org/photography.html" target="_blank">Gallery page</a> to see my photograph collection.</p>
-        </section>
+
         <section id="contact">
             <h2>Contact</h2>
-            <p><a href="mailto:raghavendra.meena@wur.nl" class="fa fa-mail-reply"></a> | 
-            <a href="https://www.linkedin.com/in/raghavendra-meena/" class="fa fa-linkedin"></a> | 
-            <a href="https://www.twitter.com/sweetstark00" class="fa fa-twitter"></a> | 
-            <a href="https://www.instagram.com/raghavendra" class="fa fa-instagram"></a> | 
-            <a href="https://randomwalker.org/index.html" class="fa fa-globe"></a></p>
+            <div class="contact-links">
+                <a href="mailto:raghavendra.meena@wur.nl" class="fa fa-mail-reply"></a>
+                <a href="https://www.linkedin.com/in/raghavendra-meena/" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/raghavendram3" class="fa fa-instagram"></a>
+                <a href="https://randomwalker.org/index.html" class="fa fa-globe"></a>
+            </div>
         </section>
     </div>
+
     <footer>
-        <p>&copy; 2024 Raghavendra Meena</p>
+        <p>&copy; 2025 Raghavendra Meena</p>
     </footer>
 </body>
 </html>
