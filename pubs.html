@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +20,6 @@
             --bg-color: #f8f9fa;
             --text-color: #2c3e50;
         }
-
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -30,7 +28,6 @@
             color: var(--text-color);
             line-height: 1.6;
         }
-
         header {
             background-color: white;
             padding: 1.5rem;
@@ -39,7 +36,6 @@
             top: 0;
             z-index: 1000;
         }
-
         .header-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -47,7 +43,6 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
             font-family: 'Playfair Display', serif;
             font-size: 1.8em;
@@ -55,7 +50,6 @@
             color: var(--primary-color);
             text-decoration: none;
         }
-
         nav a {
             color: var(--text-color);
             text-decoration: none;
@@ -65,12 +59,10 @@
             padding: 0.5rem 1rem;
             border-radius: 5px;
         }
-
         nav a:hover {
             color: var(--accent-color);
             background-color: rgba(231, 76, 60, 0.1);
         }
-
         .container {
             max-width: 1200px;
             margin: 2rem auto;
@@ -79,7 +71,6 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.05);
             border-radius: 15px;
         }
-
         h1 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5em;
@@ -88,7 +79,6 @@
             border-bottom: 3px solid var(--accent-color);
             padding-bottom: 10px;
         }
-
         .publication {
             background: var(--bg-color);
             margin-bottom: 2rem;
@@ -96,11 +86,9 @@
             border-radius: 10px;
             transition: transform 0.3s ease;
         }
-
         .publication:hover {
             transform: translateY(-5px);
         }
-
         .title {
             font-family: 'Playfair Display', serif;
             font-size: 1.4em;
@@ -108,18 +96,15 @@
             color: var(--primary-color);
             margin-bottom: 1rem;
         }
-
         .journal {
             color: var(--accent-color);
             font-style: italic;
             margin-bottom: 0.8rem;
         }
-
         .authors {
             margin-bottom: 1rem;
             color: var(--text-color);
         }
-
         .takeaway {
             background-color: white;
             padding: 1.5rem;
@@ -127,7 +112,6 @@
             margin-top: 1rem;
             border-radius: 0 10px 10px 0;
         }
-
         footer {
             background-color: white;
             color: var(--text-color);
@@ -135,26 +119,6 @@
             padding: 1.5rem 0;
             margin-top: 4rem;
             box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            nav {
-                margin-top: 1rem;
-            }
-
-            nav a {
-                margin: 0 0.5rem;
-                padding: 0.3rem 0.6rem;
-            }
         }
     </style>
 </head>
@@ -173,91 +137,106 @@
     </header>
 
     <div class="container">
-  <h1>List of Publications (with AI generated summaries)</h1>
+      <h1>List of Publications</h1>
 
-  <div class="publication">
-    <div class="title">Rationalizing Catalytic Performances of Mo/W-(Oxy)Carbides for Hydrodeoxygenation Reaction</div>
-    <div class="journal">ChemCatChem (2025)</div>
-    <div class="authors">Meena, R.; Draijer, K. M.; van Dam, B.; Zuilhof, H.; Bitter, J. H.; Li, G.</div>
-    <div class="takeaway">
-      <p>Summary: This DFT and AIMD-based study compares the performance of Mo- and W-based (oxy)carbides for HDO of butyric acid. Oxygen on the surface improves C–O bond cleavage and hydrogenation, making Mo<sub>2</sub>CO<sub>x</sub> the most promising material. <a href="https://doi.org/10.1002/cctc.202500659" target="_blank">DOI: 10.1002/cctc.202500659</a></p>
+      <!-- ChemCatChem 2025 -->
+      <div class="publication">
+        <div class="title">Rationalizing Catalytic Performances of Mo/W-(Oxy)Carbides for Hydrodeoxygenation Reaction</div>
+        <div class="journal">ChemCatChem (2025)</div>
+        <div class="authors">Meena, R.; Draijer, K. M.; van Dam, B.; Zuilhof, H.; Bitter, J. H.; Li, G.</div>
+        <div class="takeaway">
+          <p>This DFT and AIMD-based study compares Mo- and W-(oxy)carbides for butyric acid HDO. Oxygen stabilizes active sites and lowers barriers for C–O cleavage, making Mo<sub>2</sub>CO<sub>x</sub> the most promising catalyst.</p>
+          <p><a href="https://doi.org/10.1002/cctc.202500659" target="_blank">DOI: 10.1002/cctc.202500659</a></p>
+        </div>
+      </div>
+
+      <!-- ACS Catalysis 2023 -->
+      <div class="publication">
+        <div class="title">Toward the Rational Design of More Efficient Mo<sub>2</sub>C Catalysts for Hydrodeoxygenation: Mechanism and Descriptor Identification</div>
+        <div class="journal">ACS Catalysis (2023)</div>
+        <div class="authors">Meena, R.; Bitter, J. H.; Zuilhof, H.; Li, G.</div>
+        <div class="takeaway">
+          <p>Mechanistic DFT study shows that alcohol dissociation is rate-limiting in butyric acid HDO over Mo<sub>2</sub>C. Doping with Zr/Nb improves reactivity by lowering barriers and tuning adsorption energies.</p>
+          <p><a href="https://doi.org/10.1021/acscatal.3c03728" target="_blank">DOI: 10.1021/acscatal.3c03728</a></p>
+        </div>
+      </div>
+
+      <!-- JACS 2024 -->
+      <div class="publication">
+        <div class="title">Surface-Activated Mechano-Catalysis for Ambient Conversion of Plastic Waste</div>
+        <div class="journal">Journal of the American Chemical Society (2024)</div>
+        <div class="authors">Hergesell, A.; Baarslag, R.; Seitzinger, C.; Meena, R.; et al.</div>
+        <div class="takeaway">
+          <p>Demonstrates room-temperature mechano-catalysis for polypropylene depolymerization using tribochemically activated grinding beads. Mo and Pt catalysts provide high hydrocarbon yields without heating.</p>
+          <p><a href="https://doi.org/10.1021/jacs.4c07157" target="_blank">DOI: 10.1021/jacs.4c07157</a></p>
+        </div>
+      </div>
+
+      <!-- Angewandte Chemie 2023 -->
+      <div class="publication">
+        <div class="title">Revealing Active Sites in Methane Non-Oxidative Coupling over Iron-Containing Zeolite</div>
+        <div class="journal">Angewandte Chemie International Edition (2023)</div>
+        <div class="authors">Zhang, H.; Meena, R.; et al.</div>
+        <div class="takeaway">
+          <p>Combined operando XAS and DFT uncover Fe<sup>3+</sup> in zeolites as active sites for methane coupling, explaining observed selectivity to ethylene/ethane under non-oxidative conditions.</p>
+          <p><a href="https://doi.org/10.1002/anie.202306196" target="_blank">DOI: 10.1002/anie.202306196</a></p>
+        </div>
+      </div>
+
+      <!-- JCP 2022 -->
+      <div class="publication">
+        <div class="title">Ground-State Properties of the Narrowest Zigzag Graphene Nanoribbon from Quantum Monte Carlo and Comparison with Density Functional Theory</div>
+        <div class="journal">Journal of Chemical Physics (2022)</div>
+        <div class="authors">Meena, R.; Li, G.; Casula, M.</div>
+        <div class="takeaway">
+          <p>QMC calculations show strong antiferromagnetic correlations in narrow ZGNRs and benchmark DFT+U predictions, offering insights into spin-dependent properties of low-dimensional carbons.</p>
+          <p><a href="https://doi.org/10.1063/5.0078234" target="_blank">DOI: 10.1063/5.0078234</a></p>
+        </div>
+      </div>
+
+      <!-- ChemRxiv 2025 -->
+      <div class="publication">
+        <div class="title">Homolytic Fracture of Inorganic Crystalline Materials Enhances the Mechanochemical Degradation of Polypropylene</div>
+        <div class="journal">ChemRxiv Preprint (2025)</div>
+        <div class="authors">Hergesell, A.; Popp, S.; Meena, R.; et al.</div>
+        <div class="takeaway">
+          <p>Mechanical fracture of inorganics during milling generates radicals that trigger ambient degradation of polypropylene, highlighting a synergy between mechanochemistry and catalyst supports.</p>
+          <p><a href="https://doi.org/10.26434/chemrxiv-2025-lnhzj" target="_blank">Preprint Link</a></p>
+        </div>
+      </div>
+
+      <!-- RSC Sustainability 2025 -->
+      <div class="publication">
+        <div class="title">Condition-Dependent Regioselectivity of Electrochemical Bromination of Methyl Levulinate</div>
+        <div class="journal">RSC Sustainability (2025)</div>
+        <div class="authors">Pirgach, D.; Meena, R.; Li, G.; Miloserdov, F. M.; van Es, D. S.; Bruijnincx, P. C. A.; Bitter, J. H.</div>
+        <div class="takeaway">
+          <p>Shows how solvent determines regioselectivity: aqueous media lead to α-brominated esters, while methanol favors γ-substituted products. Offers green synthetic routes for biomass-derived esters.</p>
+          <p><a href="https://doi.org/10.1039/D5SU00037H" target="_blank">DOI: 10.1039/D5SU00037H</a></p>
+        </div>
+      </div>
+
+      <!-- Submitted RWGS -->
+      <div class="publication">
+        <div class="title">Mesoporous Al<sub>10−x</sub>Cu<sub>x</sub>O<sub>y</sub> with Enhanced Activity and Stability for RWGS Reaction</div>
+        <div class="journal">Submitted (2025)</div>
+        <div class="authors">Saju, S.; Rajendran, S.; Meena, R.; et al.</div>
+        <div class="takeaway">
+          <p>Reports a new Cu–aluminate mesoporous catalyst with excellent stability and CO selectivity for the reverse water-gas shift reaction.</p>
+        </div>
+      </div>
+
+      <!-- JPCA 2021 -->
+      <div class="publication">
+        <div class="title">Comparison of RNC Coupling and CO Coupling Mediated by Cr–Cr Quintuple Bond and B–B Multiple Bonds</div>
+        <div class="journal">Journal of Physical Chemistry A (2021)</div>
+        <div class="authors">Ghorai, S.; Meena, R.; Joseph, A. P.; Jemmis, E. D.</div>
+        <div class="takeaway">
+          <p>Computational analysis shows isocyanide coupling occurs via spin crossover at Cr–Cr bonds, while CO is less reactive due to strong backbonding to B–B bonds.</p>
+          <p><a href="https://doi.org/10.1021/acs.jpca.1c05185" target="_blank">DOI: 10.1021/acs.jpca.1c05185</a></p>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="publication">
-    <div class="title">Toward the Rational Design of More Efficient Mo<sub>2</sub>C Catalysts for Hydrodeoxygenation: Mechanism and Descriptor Identification</div>
-    <div class="journal">ACS Catalysis (2023)</div>
-    <div class="authors">Meena, R.; Bitter, J. H.; Zuilhof, H.; Li, G.</div>
-    <div class="takeaway">
-      <p>Summary: A detailed mechanistic study revealing that butanol dissociation is the rate-limiting step in HDO of butyric acid over Mo<sub>2</sub>C. Dopants like Zr and Nb significantly enhance catalytic activity. <a href="https://doi.org/10.1021/acscatal.3c03728" target="_blank">DOI: 10.1021/acscatal.3c03728</a></p>
-    </div>
-  </div>
-
-  <div class="publication">
-    <div class="title">Ground-State Properties of the Narrowest Zigzag Graphene Nanoribbon from Quantum Monte Carlo and Comparison with Density Functional Theory</div>
-    <div class="journal">Journal of Chemical Physics (2022)</div>
-    <div class="authors">Meena, R.; Li, G.; Casula, M.</div>
-    <div class="takeaway">
-      <p>Summary: QMC simulations show strong antiferromagnetic correlation and large stabilization energy in narrow graphene nanoribbons, offering benchmarks for DFT+U methods. <a href="https://doi.org/10.1063/5.0078234" target="_blank">DOI: 10.1063/5.0078234</a></p>
-    </div>
-  </div>
-
-  <div class="publication">
-    <div class="title">Homolytic Fracture of Inorganic Crystalline Materials Enhances the Mechanochemical Degradation of Polypropylene</div>
-    <div class="journal">Chemical Science (submitted, 2025)</div>
-    <div class="authors">Hergesell, A.; Popp, S.; Meena, R.; et al.</div>
-    <div class="takeaway">
-      <p>Summary: Mechanical fracture of crystalline inorganics during milling generates radicals that initiate ambient degradation of polypropylene. <a href="https://doi.org/10.26434/chemrxiv-2025-lnhzj" target="_blank">Preprint: ChemRxiv</a></p>
-    </div>
-  </div>
-
-  <div class="publication">
-    <div class="title">Condition-Dependent Regioselectivity of Electrochemical Bromination of Methyl Levulinate</div>
-    <div class="journal">RSC Sustainability (2025)</div>
-    <div class="authors">Pirgach, D.; Meena, R.; Li, G.; Miloserdov, F. M.; van Es, D. S.; Bruijnincx, P. C. A.; Bitter, J. H.</div>
-    <div class="takeaway">
-      <p>Summary: Demonstrates that solvent choice governs bromination selectivity: aqueous media favor α‑bromo products, while methanol gives γ‑substituted esters. <a href="https://doi.org/10.1039/D5SU00037H" target="_blank">DOI: 10.1039/D5SU00037H</a></p>
-    </div>
-  </div>
-
-  <div class="publication">
-    <div class="title">Mesoporous Al<sub>10−x</sub>Cu<sub>x</sub>O<sub>y</sub> with Enhanced Activity and Stability for RWGS Reaction</div>
-    <div class="journal">Submitted (2025)</div>
-    <div class="authors">Saju, S.; Rajendran, S.; Meena, R.; et al.</div>
-    <div class="takeaway">
-      <p>Summary: A new mesoporous Cu-aluminate catalyst shows high CO selectivity and thermal stability for the reverse water-gas shift reaction. <em>Manuscript submitted</em></p>
-    </div>
-  </div>
-
-  <div class="publication">
-    <div class="title">Surface-Activated Mechano-Catalysis for Ambient Conversion of Plastic Waste</div>
-    <div class="journal">Journal of the American Chemical Society (2024)</div>
-    <div class="authors">Hergesell, A.; Baarslag, R.; Seitzinger, C.; Meena, R.; et al.</div>
-    <div class="takeaway">
-      <p>Summary: Room-temperature catalytic depolymerization of polypropylene using tribochemically activated grinding beads. Mo and Pt catalysts enable high hydrocarbon yields. <a href="https://doi.org/10.1021/jacs.4c07157" target="_blank">DOI: 10.1021/jacs.4c07157</a></p>
-    </div>
-  </div>
-
-  <div class="publication">
-    <div class="title">Revealing Active Sites in Methane Non-Oxidative Coupling over Iron-Containing Zeolite</div>
-    <div class="journal">Angewandte Chemie International Edition (2023)</div>
-    <div class="authors">Zhang, H.; Meena, R.; et al.</div>
-    <div class="takeaway">
-      <p>Summary: Operando XAS and DFT reveal that isolated Fe<sup>3+</sup> centers in zeolites become reduced and catalytically active for methane coupling, selectively yielding ethylene and ethane. <a href="https://doi.org/10.1002/anie.202306196" target="_blank">DOI: 10.1002/anie.202306196</a></p>
-    </div>
-  </div>
-
-  <div class="publication">
-    <div class="title">Comparison of RNC Coupling and CO Coupling Mediated by Cr–Cr Quintuple Bond and B–B Multiple Bonds</div>
-    <div class="journal">Journal of Physical Chemistry A (2021)</div>
-    <div class="authors">Ghorai, S.; Meena, R.; Joseph, A. P.; Jemmis, E. D.</div>
-    <div class="takeaway">
-      <p>Summary: Comparative computational study of Cr–Cr and B–B bonded systems shows isocyanide undergoes reductive coupling via spin crossover, while CO is less reactive due to strong backbonding. <a href="https://doi.org/10.1021/acs.jpca.1c05185" target="_blank">DOI: 10.1021/acs.jpca.1c05185</a></p>
-    </div>
-  </div>
-</div>
-
-
 
     <footer>
         <p>&copy; 2025 Raghavendra Meena</p>
